@@ -1000,8 +1000,14 @@ footer{background:#070707;border-top:1px solid var(--border);padding:3rem 1.25re
 </div>
 
 <script>
-document.getElementById('toast').classList.remove('show');
-
+window.addEventListener('load', function() {
+  document.getElementById('toast').classList.remove('show');
+});
+window.addEventListener('pageshow', function(e) {
+  if (e.persisted) {
+    document.getElementById('toast').classList.remove('show');
+  }
+});
 // Fade-in scroll observer
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => {
