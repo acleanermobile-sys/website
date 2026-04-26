@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mobile Car Detailing in Imperial Valley | ACleaning Mobile Detailer</title>
+<meta name="description" content="Professional mobile car detailing in Calexico, El Centro & the Imperial Valley. Interior, exterior & full detail packages — we come to you. Call (760) 925-1862.">
+
+<!-- FAVICON PLACEHOLDER — replace with real favicon.ico when ready -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2218%22 fill=%22%230A0A0A%22/><text x=%2250%22 y=%2272%22 font-size=%2270%22 font-family=%22Arial,sans-serif%22 font-weight=%22900%22 text-anchor=%22middle%22 fill=%22%23C8102E%22>A</text></svg>">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- LocalBusiness JSON-LD Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoDetailing",
+  "name": "ACleaning Mobile Detailer",
+  "image": "https://acmobiledetailing.netlify.app/acleanimagedark.jpg",
+  "url": "https://acmobiledetailing.netlify.app/",
+  "telephone": "+1-760-925-1862",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Calexico",
+    "addressRegion": "CA",
+    "addressCountry": "US"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Calexico" },
+    { "@type": "City", "name": "El Centro" },
+    { "@type": "City", "name": "Brawley" },
+    { "@type": "City", "name": "Holtville" },
+    { "@type": "City", "name": "Heber" },
+    { "@type": "AdministrativeArea", "name": "Imperial Valley" }
+  ],
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "06:00",
+    "closes": "21:00"
+  }],
+  "sameAs": [
+    "https://instagram.com/",
+    "https://facebook.com/"
+  ]
+}
+</script>
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --red:#C8102E;--red-dark:#9B0B21;--red-light:#E8192E;--red-glow:rgba(200,16,46,0.18);
+  --black:#0A0A0A;--dark:#111111;--card:#171717;--card2:#1F1F1F;
+  --border:#262626;--border-light:#333;
+  --white:#FFFFFF;--gray:#888;--gray-light:#A8A8A8;
+  --text:#E8E8E8;--gold:#E5B83F;
+  --ff-display:'Bricolage Grotesque',ui-serif,Georgia,serif;
+  --ff:'Manrope',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --shadow-card:0 1px 0 rgba(255,255,255,0.04) inset, 0 8px 24px rgba(0,0,0,0.4);
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:var(--black);color:var(--text);font-family:var(--ff);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+/* Subtle grain texture overlay */
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:200;opacity:0.035;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,10,0.85);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+.nav-inner{max-width:1180px;margin:0 auto;padding:0 1.25rem;height:62px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:var(--ff-display);font-size:1.15rem;font-weight:800;color:var(--white);letter-spacing:-0.02em}
+.nav-logo span{color:var(--red)}
+.nav-phone{display:flex;align-items:center;gap:0.45rem;color:var(--white);text-decoration:none;font-size:0.85rem;font-weight:700;background:var(--red);padding:0.5rem 1rem;border-radius:6px;transition:background 0.2s,transform 0.1s;letter-spacing:0.01em}
+.nav-phone:hover{background:var(--red-dark)}
+.nav-phone:active{transform:scale(0.97)}
+.nav-phone svg{width:14px;height:14px;flex-shrink:0}
+.nav-right{display:flex;align-items:center;gap:0.6rem}
+.nav-insta{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:6px;border:1px solid var(--border);color:var(--gray-light);transition:color 0.2s,border-color 0.2s,background 0.2s}
+.nav-insta:hover{color:var(--white);border-color:#555;background:rgba(255,255,255,0.03)}
+.nav-insta svg{width:17px;height:17px}
+@media(max-width:540px){
+  .nav-phone span.nav-phone-text{display:none}
+  .nav-phone{padding:0.5rem 0.75rem}
+}
+
+/* HERO */
+.hero{
+  min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;
+  text-align:center;padding:7rem 1.25rem 4rem;position:relative;overflow:hidden;
+  background:url('acleanimagedark.png') center center/cover no-repeat var(--black);
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(10,10,10,0.55) 0%,rgba(10,10,10,0.45) 40%,rgba(10,10,10,0.85) 100%);
+  pointer-events:none;z-index:0;
+}
+.hero::after{
+  content:'';position:absolute;top:-100px;left:50%;transform:translateX(-50%);
+  width:700px;height:500px;
+  background:radial-gradient(ellipse,rgba(200,16,46,0.18) 0%,transparent 65%);
+  pointer-events:none;z-index:0;
+}
+.hero>*{position:relative;z-index:1}
+
+.hero-stars{
+  display:inline-flex;align-items:center;gap:0.55rem;
+  background:rgba(229,184,63,0.08);border:1px solid rgba(229,184,63,0.3);
+  color:var(--gold);font-size:0.74rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;
+  padding:0.45rem 0.95rem;border-radius:100px;margin-bottom:1.25rem;
+  backdrop-filter:blur(6px);
+}
+.hero-stars-icons{display:inline-flex;gap:1px;color:var(--gold)}
+.hero-label{
+  display:inline-flex;align-items:center;gap:0.4rem;
+  background:rgba(200,16,46,0.14);border:1px solid rgba(200,16,46,0.35);
+  color:#FF5266;font-size:0.7rem;font-weight:700;letter-spacing:0.13em;text-transform:uppercase;
+  padding:0.4rem 0.95rem;border-radius:100px;margin-bottom:1.5rem;
+  backdrop-filter:blur(6px);
+}
+.hero-label::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--red);box-shadow:0 0 8px var(--red);flex-shrink:0}
+
+h1.hero-title{
+  font-family:var(--ff-display);
+  font-size:clamp(2.4rem,7.5vw,5rem);font-weight:800;line-height:1;letter-spacing:-0.035em;
+  color:var(--white);margin-bottom:1rem;max-width:920px;
+  text-shadow:0 2px 30px rgba(0,0,0,0.6);
+}
+h1.hero-title .accent{color:var(--red);font-style:italic;font-weight:700}
+h1.hero-title .we-come{display:block;font-size:0.55em;font-weight:700;color:var(--gray-light);margin-top:0.4rem;letter-spacing:-0.02em;font-style:italic}
+
+.hero-sub{font-size:clamp(0.95rem,2vw,1.1rem);color:var(--gray-light);margin-bottom:2.25rem;max-width:560px;line-height:1.55}
+
+.hero-cta{display:flex;gap:0.75rem;flex-wrap:wrap;justify-content:center;width:100%;max-width:640px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:0.5rem;
+  padding:1rem 1.75rem;font-size:0.95rem;font-weight:700;border-radius:9px;
+  cursor:pointer;text-decoration:none;letter-spacing:0.01em;font-family:var(--ff);
+  transition:background 0.2s,border-color 0.2s,color 0.2s,transform 0.1s,box-shadow 0.2s;
+  border:1px solid transparent;white-space:nowrap;
+}
+.btn:active{transform:translateY(1px)}
+.btn-primary{background:var(--red);color:var(--white);box-shadow:0 4px 20px rgba(200,16,46,0.35),inset 0 1px 0 rgba(255,255,255,0.15)}
+.btn-primary:hover{background:var(--red-dark);box-shadow:0 6px 24px rgba(200,16,46,0.45),inset 0 1px 0 rgba(255,255,255,0.15)}
+.btn-secondary{background:rgba(255,255,255,0.04);color:var(--white);border-color:rgba(255,255,255,0.18);backdrop-filter:blur(6px)}
+.btn-secondary:hover{border-color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.08)}
+.btn-outline{background:transparent;color:var(--white);border-color:var(--red);backdrop-filter:blur(6px)}
+.btn-outline:hover{background:rgba(200,16,46,0.12);border-color:var(--red-light)}
+.btn svg{width:17px;height:17px;flex-shrink:0}
+
+/* TRUST BAR */
+.trust-bar{background:linear-gradient(180deg,var(--dark) 0%,var(--black) 100%);border-bottom:1px solid var(--border);padding:2rem 1.25rem}
+.trust-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.trust-item{display:flex;align-items:center;gap:0.85rem;justify-content:center;text-align:left}
+.trust-icon{width:44px;height:44px;border-radius:10px;background:rgba(200,16,46,0.1);border:1px solid rgba(200,16,46,0.28);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--red)}
+.trust-icon svg{width:22px;height:22px}
+.trust-text{font-size:0.85rem;font-weight:700;color:var(--white);line-height:1.3}
+@media(max-width:720px){
+  .trust-inner{grid-template-columns:1fr;gap:0.85rem}
+  .trust-item{justify-content:flex-start}
+}
+
+/* SECTIONS */
+section{padding:5rem 1.25rem;position:relative}
+.section-inner{max-width:1180px;margin:0 auto}
+.section-eyebrow{font-size:0.72rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--red);margin-bottom:0.6rem;display:flex;align-items:center;gap:0.6rem}
+.section-eyebrow::before{content:'';width:24px;height:1.5px;background:var(--red)}
+.section-title{font-family:var(--ff-display);font-size:clamp(1.85rem,4.5vw,2.6rem);font-weight:800;color:var(--white);letter-spacing:-0.03em;line-height:1.1;margin-bottom:0.75rem}
+.section-sub{color:var(--gray-light);font-size:0.95rem;max-width:560px;line-height:1.6}
+
+/* PRICING */
+#pricing{background:var(--dark)}
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.25rem;margin-top:2.5rem}
+.pricing-card{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;position:relative;transition:border-color 0.2s,transform 0.2s;box-shadow:var(--shadow-card)}
+.pricing-card:hover{border-color:#3a3a3a;transform:translateY(-2px)}
+.pricing-card-head{padding:1.35rem 1.5rem;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:0.8rem}
+.vehicle-icon{width:42px;height:42px;background:rgba(200,16,46,0.12);border:1px solid rgba(200,16,46,0.3);border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.vehicle-icon svg{width:22px;height:22px;color:var(--red)}
+.vehicle-name{font-family:var(--ff-display);font-size:1.1rem;font-weight:700;color:var(--white);letter-spacing:-0.01em}
+.vehicle-sub{font-size:0.76rem;color:var(--gray)}
+.pricing-rows{padding:1rem 1.5rem 1.25rem}
+.price-row{display:flex;justify-content:space-between;align-items:center;padding:0.85rem 0;border-bottom:1px solid var(--border);position:relative}
+.price-row:last-child{border-bottom:none}
+.price-row.featured{background:linear-gradient(180deg,rgba(200,16,46,0.1) 0%,rgba(200,16,46,0.04) 100%);margin:0.6rem -1.5rem -1.25rem;padding:1.1rem 1.5rem 1.25rem;border-top:1px solid rgba(200,16,46,0.25);border-bottom:none;position:relative}
+.popular-badge{position:absolute;top:-9px;right:1rem;background:var(--red);color:var(--white);font-size:0.62rem;font-weight:800;letter-spacing:0.13em;text-transform:uppercase;padding:0.2rem 0.6rem;border-radius:100px;box-shadow:0 2px 12px rgba(200,16,46,0.45)}
+.price-label{font-size:0.9rem;color:var(--text);font-weight:500}
+.price-hint{font-size:0.74rem;color:var(--gray);margin-top:0.15rem}
+.price-label-main{font-size:0.95rem;color:var(--white);font-weight:700}
+.price-label-sub{font-size:0.74rem;color:var(--gray-light)}
+.price-amount{font-family:var(--ff-display);font-size:1.4rem;font-weight:800;color:var(--white);letter-spacing:-0.02em}
+.price-row.featured .price-amount{color:#FF5266;font-size:1.6rem}
+.pricing-note{margin-top:1.5rem;text-align:center;font-size:0.84rem;color:var(--gray);font-style:italic}
+.discount-banner{margin-top:1.5rem;background:linear-gradient(90deg,rgba(229,184,63,0.08) 0%,rgba(229,184,63,0.04) 100%);border:1px solid rgba(229,184,63,0.25);border-radius:10px;padding:0.95rem 1.25rem;text-align:center;font-size:0.88rem;color:var(--white);font-weight:600}
+.discount-banner span{color:var(--gold);font-weight:800;letter-spacing:0.04em;text-transform:uppercase;font-size:0.72rem;display:block;margin-bottom:0.15rem}
+
+/* INCLUDED */
+#included{background:var(--black)}
+.included-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.25rem;margin-top:2.5rem}
+.included-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.6rem;box-shadow:var(--shadow-card);transition:border-color 0.2s,transform 0.2s}
+.included-card:hover{border-color:#3a3a3a;transform:translateY(-2px)}
+.included-card-head{display:flex;align-items:center;gap:0.85rem;margin-bottom:1.4rem;padding-bottom:1rem;border-bottom:1px solid var(--border)}
+.inc-icon{width:40px;height:40px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.inc-icon.ext{background:rgba(200,16,46,0.13);border:1px solid rgba(200,16,46,0.3)}
+.inc-icon.int{background:rgba(56,189,248,0.1);border:1px solid rgba(56,189,248,0.25)}
+.inc-icon svg{width:20px;height:20px}
+.inc-icon.ext svg{color:var(--red)}
+.inc-icon.int svg{color:#38BDF8}
+.inc-title{font-family:var(--ff-display);font-size:1.05rem;font-weight:700;color:var(--white);letter-spacing:-0.01em}
+.inc-sub{font-size:0.78rem;color:var(--gray)}
+.svc-list{list-style:none;display:flex;flex-direction:column;gap:0.7rem}
+.svc-list li{display:flex;align-items:flex-start;gap:0.6rem;font-size:0.88rem;color:var(--text);line-height:1.5}
+.check{width:18px;height:18px;border-radius:50%;background:rgba(200,16,46,0.12);border:1px solid rgba(200,16,46,0.4);flex-shrink:0;margin-top:0.1rem;display:flex;align-items:center;justify-content:center}
+.check::after{content:'';width:7px;height:4px;border-left:1.7px solid var(--red);border-bottom:1.7px solid var(--red);transform:rotate(-45deg) translateY(-1px)}
+
+/* ADD-ONS */
+#addons{background:var(--dark)}
+.addon-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-top:2rem}
+.addon-card{background:var(--card);border:1px solid var(--border);border-radius:11px;padding:1.25rem;display:flex;flex-direction:column;gap:0.5rem;transition:border-color 0.2s,transform 0.2s}
+.addon-card:hover{border-color:#3a3a3a;transform:translateY(-2px)}
+.addon-top{display:flex;align-items:flex-start;justify-content:space-between;gap:0.5rem}
+.addon-name{font-size:0.95rem;font-weight:700;color:var(--white);line-height:1.3}
+.addon-price{font-family:var(--ff-display);font-size:1.05rem;font-weight:800;color:var(--red);white-space:nowrap;letter-spacing:-0.01em}
+.addon-price small{font-size:0.65rem;color:var(--gray);font-weight:500;display:block;text-align:right;margin-top:-2px;letter-spacing:0.05em;text-transform:uppercase}
+.addon-desc{font-size:0.83rem;color:var(--gray-light);line-height:1.5}
+.addon-note{margin-top:1.5rem;background:rgba(200,16,46,0.06);border:1px solid rgba(200,16,46,0.2);border-radius:9px;padding:1rem 1.15rem;font-size:0.85rem;color:var(--gray-light);display:flex;align-items:flex-start;gap:0.6rem;line-height:1.55}
+.addon-note-icon{color:var(--red);flex-shrink:0;font-style:normal;font-weight:800;font-size:0.95rem;line-height:1.4}
+
+/* BEFORE/AFTER (HIDDEN) */
+#before-after{background:var(--black)}
+.ba-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;margin-top:2.5rem}
+.ba-pair{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:0.6rem}
+.ba-block{aspect-ratio:4/3;border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:700;color:var(--gray-light);font-size:0.85rem;text-align:center;padding:1rem}
+.ba-before{background:linear-gradient(135deg,#2a2a2a 0%,#1a1a1a 100%)}
+.ba-after{background:linear-gradient(135deg,#3a1216 0%,#1a1a1a 100%)}
+.ba-label{font-size:0.7rem;letter-spacing:0.13em;text-transform:uppercase;color:var(--white);margin-bottom:0.4rem}
+.ba-note{font-size:0.72rem;color:var(--gray);font-weight:500}
+
+/* FAQ */
+#faq{background:var(--black)}
+.faq-list{max-width:780px;margin:2.5rem auto 0;display:flex;flex-direction:column;gap:0.6rem}
+.faq-item{background:var(--card);border:1px solid var(--border);border-radius:11px;overflow:hidden;transition:border-color 0.2s}
+.faq-item.open{border-color:rgba(200,16,46,0.4)}
+.faq-q{
+  width:100%;background:transparent;border:none;color:var(--white);
+  padding:1.15rem 1.4rem;font-size:0.98rem;font-weight:700;text-align:left;cursor:pointer;
+  display:flex;justify-content:space-between;align-items:center;gap:1rem;font-family:var(--ff);
+  transition:background 0.2s;letter-spacing:-0.005em;
+}
+.faq-q:hover{background:rgba(255,255,255,0.025)}
+.faq-icon{width:24px;height:24px;border-radius:50%;background:rgba(200,16,46,0.12);border:1px solid rgba(200,16,46,0.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform 0.3s,background 0.2s;color:var(--red)}
+.faq-icon svg{width:12px;height:12px}
+.faq-item.open .faq-icon{transform:rotate(180deg);background:var(--red);color:var(--white);border-color:var(--red)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.35s ease}
+.faq-a-inner{padding:0 1.4rem 1.4rem;color:var(--gray-light);font-size:0.92rem;line-height:1.65}
+.faq-item.open .faq-a{max-height:500px}
+
+/* TESTIMONIALS (HIDDEN) */
+#testimonials{background:var(--dark)}
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;margin-top:2.5rem}
+.testi-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.5rem}
+.testi-stars{color:var(--gold);font-size:1.1rem;margin-bottom:0.75rem;letter-spacing:0.05em}
+.testi-quote{font-size:0.95rem;color:var(--text);line-height:1.6;margin-bottom:1.25rem;font-style:italic}
+.testi-meta{display:flex;align-items:center;gap:0.75rem;padding-top:1rem;border-top:1px solid var(--border)}
+.testi-avatar{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--red) 0%,var(--red-dark) 100%);display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--white);font-size:0.95rem}
+.testi-name{font-size:0.88rem;font-weight:700;color:var(--white)}
+.testi-vehicle{font-size:0.74rem;color:var(--gray)}
+
+/* ABOUT */
+#about{background:var(--dark);position:relative;overflow:hidden}
+#about::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(200,16,46,0.08) 0%,transparent 65%);pointer-events:none}
+.about-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:3rem;align-items:start;margin-top:2.5rem;position:relative}
+.about-photo{aspect-ratio:4/5;background:linear-gradient(135deg,#1f1f1f 0%,#0f0f0f 100%);border:1px solid var(--border);border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:1.5rem;text-align:center;color:var(--gray);position:sticky;top:90px}
+.about-photo-icon{width:60px;height:60px;border-radius:50%;background:rgba(200,16,46,0.1);border:1px solid rgba(200,16,46,0.3);display:flex;align-items:center;justify-content:center;color:var(--red);margin-bottom:1rem}
+.about-photo-icon svg{width:30px;height:30px}
+.about-photo-text{font-size:0.82rem;font-weight:600;line-height:1.5;color:var(--gray-light)}
+.about-photo-sub{font-size:0.72rem;color:var(--gray);margin-top:0.4rem;font-style:italic}
+.about-text p{margin-bottom:1.15rem;color:var(--text);font-size:0.98rem;line-height:1.75}
+.about-text p:last-child{font-family:var(--ff-display);font-style:italic;color:var(--white);font-weight:700;font-size:1.05rem;margin-top:0.5rem}
+@media(max-width:820px){
+  .about-grid{grid-template-columns:1fr;gap:2rem}
+  .about-photo{aspect-ratio:3/2;position:static;max-width:340px;margin:0 auto}
+}
+
+/* SERVICE AREA */
+#service-area{background:var(--black)}
+.area-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:2.25rem;margin-top:2rem;position:relative;overflow:hidden;box-shadow:var(--shadow-card)}
+.area-card::before{content:'';position:absolute;top:0;right:0;width:200px;height:200px;background:radial-gradient(circle,rgba(200,16,46,0.1) 0%,transparent 65%);pointer-events:none}
+.area-card p{position:relative;color:var(--text);font-size:0.98rem;line-height:1.75;margin-bottom:1rem}
+.area-card p:last-child{margin-bottom:0}
+.area-cities{display:flex;flex-wrap:wrap;gap:0.5rem;margin:1.25rem 0;position:relative}
+.area-chip{background:rgba(200,16,46,0.1);border:1px solid rgba(200,16,46,0.3);color:var(--white);font-size:0.82rem;font-weight:600;padding:0.45rem 0.95rem;border-radius:100px}
+
+/* GOOGLE REVIEWS (HIDDEN) */
+#reviews{background:var(--dark)}
+.reviews-placeholder{background:var(--card);border:1px dashed var(--border-light);border-radius:14px;padding:3rem 2rem;text-align:center;margin-top:2rem}
+.reviews-placeholder-icon{width:60px;height:60px;border-radius:50%;background:rgba(255,255,255,0.04);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;color:var(--gold)}
+.reviews-placeholder p{color:var(--gray-light);font-size:0.95rem;line-height:1.6;max-width:480px;margin:0 auto}
+
+/* CONTACT */
+#contact{background:linear-gradient(180deg,var(--black) 0%,var(--dark) 100%)}
+.cta-box{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:3rem 2rem;text-align:center;position:relative;overflow:hidden;box-shadow:var(--shadow-card)}
+.cta-glow{position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:600px;height:300px;background:radial-gradient(ellipse,rgba(200,16,46,0.18) 0%,transparent 65%);pointer-events:none}
+.cta-title{font-family:var(--ff-display);font-size:clamp(1.6rem,4.5vw,2.3rem);font-weight:800;color:var(--white);margin-bottom:0.6rem;position:relative;letter-spacing:-0.025em;line-height:1.15}
+.cta-sub{color:var(--gray-light);margin-bottom:2rem;font-size:0.95rem;position:relative;max-width:480px;margin-left:auto;margin-right:auto}
+.cta-actions{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;margin-bottom:1.25rem;position:relative}
+.cta-phone{display:inline-flex;align-items:center;gap:0.6rem;background:var(--red);color:var(--white);text-decoration:none;padding:1rem 2rem;border-radius:9px;font-size:1.05rem;font-weight:800;transition:background 0.2s,box-shadow 0.2s,transform 0.1s;letter-spacing:0.01em;box-shadow:0 4px 20px rgba(200,16,46,0.35),inset 0 1px 0 rgba(255,255,255,0.15)}
+.cta-phone:hover{background:var(--red-dark);box-shadow:0 6px 24px rgba(200,16,46,0.45),inset 0 1px 0 rgba(255,255,255,0.15)}
+.cta-phone:active{transform:translateY(1px)}
+.cta-phone svg{width:20px;height:20px}
+.cta-whatsapp{display:inline-flex;align-items:center;gap:0.55rem;background:#25D366;color:#0A0A0A;text-decoration:none;padding:1rem 1.75rem;border-radius:9px;font-size:1rem;font-weight:800;transition:background 0.2s,transform 0.1s;letter-spacing:0.01em;box-shadow:0 4px 20px rgba(37,211,102,0.25),inset 0 1px 0 rgba(255,255,255,0.25)}
+.cta-whatsapp:hover{background:#1ec05b}
+.cta-whatsapp:active{transform:translateY(1px)}
+.cta-whatsapp svg{width:20px;height:20px}
+.response-time{font-size:0.83rem;color:var(--gray-light);margin-bottom:1.25rem;position:relative;display:inline-flex;align-items:center;gap:0.5rem}
+.response-time::before{content:'';width:8px;height:8px;border-radius:50%;background:#25D366;box-shadow:0 0 0 4px rgba(37,211,102,0.15);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 4px rgba(37,211,102,0.15)}50%{box-shadow:0 0 0 8px rgba(37,211,102,0.05)}}
+.cta-divider{display:flex;align-items:center;gap:1rem;margin:1.75rem 0;color:var(--gray);font-size:0.78rem;position:relative;font-weight:600;letter-spacing:0.08em;text-transform:uppercase}
+.cta-divider::before,.cta-divider::after{content:'';flex:1;height:1px;background:var(--border)}
+.contact-form{display:grid;gap:0.85rem;max-width:480px;margin:0 auto;text-align:left;position:relative}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:0.85rem}
+.form-group{display:flex;flex-direction:column;gap:0.35rem}
+.form-group label{font-size:0.74rem;font-weight:700;color:var(--gray-light);letter-spacing:0.08em;text-transform:uppercase}
+.form-group input,.form-group select,.form-group textarea{background:var(--card2);border:1px solid var(--border);color:var(--white);border-radius:8px;padding:0.8rem 1rem;font-size:0.9rem;font-family:var(--ff);transition:border-color 0.2s,background 0.2s;resize:vertical;outline:none}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--red);background:#252525}
+.form-group select option{background:var(--card2);color:var(--white)}
+.form-group input::placeholder,.form-group textarea::placeholder{color:#555}
+.form-submit{background:var(--red);color:var(--white);border:none;padding:0.95rem;border-radius:9px;font-size:1rem;font-weight:800;cursor:pointer;transition:background 0.2s,transform 0.1s;font-family:var(--ff);letter-spacing:0.02em;box-shadow:0 4px 16px rgba(200,16,46,0.3),inset 0 1px 0 rgba(255,255,255,0.15)}
+.form-submit:hover{background:var(--red-dark)}
+.form-submit:active{transform:translateY(1px)}
+.online-booking-note{margin-top:1rem;font-size:0.8rem;color:var(--gray);text-align:center;font-style:italic}
+
+/* INSTAGRAM FEED (HIDDEN) */
+#instagram{background:var(--black)}
+.ig-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:0.6rem;margin-top:2rem;max-width:780px;margin-left:auto;margin-right:auto}
+.ig-tile{aspect-ratio:1;background:linear-gradient(135deg,#1f1f1f 0%,#0f0f0f 100%);border:1px solid var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--gray);font-size:0.78rem;font-weight:600;text-align:center;padding:0.5rem}
+
+/* FOOTER */
+footer{background:#070707;border-top:1px solid var(--border);padding:3rem 1.25rem 2rem}
+.footer-inner{max-width:1180px;margin:0 auto}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2rem;margin-bottom:2.5rem}
+.footer-col h4{font-family:var(--ff-display);font-size:0.95rem;font-weight:700;color:var(--white);margin-bottom:1rem;letter-spacing:-0.01em}
+.footer-logo{font-family:var(--ff-display);font-size:1.3rem;font-weight:800;color:var(--white);margin-bottom:0.75rem;letter-spacing:-0.02em}
+.footer-logo span{color:var(--red)}
+.footer-tag{font-size:0.85rem;color:var(--gray-light);line-height:1.6;margin-bottom:1rem;max-width:280px}
+.footer-list{list-style:none;display:flex;flex-direction:column;gap:0.55rem}
+.footer-list li{font-size:0.85rem;color:var(--gray-light);line-height:1.5}
+.footer-list a{color:var(--gray-light);text-decoration:none;transition:color 0.2s;display:inline-flex;align-items:center;gap:0.4rem}
+.footer-list a:hover{color:var(--white)}
+.footer-list a svg{width:14px;height:14px}
+.footer-list strong{color:var(--white);font-weight:700}
+.footer-bottom{border-top:1px solid var(--border);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem}
+.footer-copy{font-size:0.78rem;color:var(--gray)}
+.footer-socials{display:flex;gap:0.5rem}
+.footer-social{width:34px;height:34px;border-radius:7px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--gray-light);transition:color 0.2s,border-color 0.2s,background 0.2s;text-decoration:none}
+.footer-social:hover{color:var(--white);border-color:#555;background:rgba(255,255,255,0.03)}
+.footer-social svg{width:16px;height:16px}
+@media(max-width:820px){
+  .footer-grid{grid-template-columns:1fr 1fr;gap:1.75rem}
+}
+@media(max-width:480px){
+  .footer-grid{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;text-align:center}
+}
+
+/* STICKY MOBILE CTA BAR */
+.mobile-cta{
+  display:none;position:fixed;bottom:0;left:0;right:0;z-index:99;
+  background:rgba(10,10,10,0.97);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-top:1px solid var(--border);padding:0.65rem 0.75rem;padding-bottom:max(0.65rem,env(safe-area-inset-bottom));
+  gap:0.5rem;
+}
+.mobile-cta a{
+  flex:1;display:flex;align-items:center;justify-content:center;gap:0.45rem;
+  text-decoration:none;font-weight:800;font-size:0.92rem;letter-spacing:0.01em;
+  padding:0.85rem 0.5rem;border-radius:8px;transition:background 0.2s,transform 0.1s;
+}
+.mobile-cta a:active{transform:scale(0.97)}
+.mobile-cta-call{background:var(--red);color:var(--white);box-shadow:inset 0 1px 0 rgba(255,255,255,0.15)}
+.mobile-cta-wa{background:#25D366;color:#0A0A0A;box-shadow:inset 0 1px 0 rgba(255,255,255,0.25)}
+.mobile-cta a svg{width:16px;height:16px;flex-shrink:0}
+@media(max-width:768px){
+  .mobile-cta{display:flex}
+  body{padding-bottom:64px}
+}
+
+/* FADE IN */
+.fade-in{opacity:0;transform:translateY(22px);transition:opacity 0.6s ease,transform 0.6s ease}
+.fade-in.visible{opacity:1;transform:none}
+
+/* TOAST */
+#toast{position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%) translateY(140%);background:var(--card2);border:1px solid var(--red);color:var(--white);padding:0.95rem 1.5rem;border-radius:9px;font-size:0.9rem;font-weight:700;z-index:999;transition:transform 0.4s cubic-bezier(0.4,0,0.2,1);pointer-events:none;white-space:nowrap;box-shadow:0 8px 32px rgba(0,0,0,0.5),0 0 0 1px rgba(200,16,46,0.2)}
+#toast.show{transform:translateX(-50%) translateY(0)}
+@media(max-width:768px){
+  #toast{bottom:5rem}
+}
+
+/* HIDDEN SECTIONS - controlled centrally */
+.section--hidden{display:none}
+
+/* MOBILE TWEAKS */
+@media(max-width:540px){
+  section{padding:3.5rem 1.25rem}
+  .form-row{grid-template-columns:1fr}
+  .cta-box{padding:2.25rem 1.25rem}
+  .cta-phone{font-size:1rem;padding:0.95rem 1.5rem}
+  .area-card{padding:1.75rem 1.5rem}
+  .ba-pair{grid-template-columns:1fr}
+  .hero-cta .btn{width:100%}
+  .hero{padding:6rem 1.25rem 3rem}
+}
+</style>
+</head>
+<body>
+
+<!-- Toast notification (form success) -->
+<div id="toast">✓ Message sent! We'll be in touch shortly.</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo"><span>A</span>Cleaning Mobile Detailer</div>
+    <div class="nav-right">
+      <!-- PERSONALIZE: Replace with real Instagram URL when account is set up -->
+      <a href="https://instagram.com" class="nav-insta" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </a>
+      <a href="tel:7609251862" class="nav-phone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        <span class="nav-phone-text">Call Now</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-stars" style="display: none;">
+    <span class="hero-stars-icons">★★★★★</span>
+    <span>Rated 5 stars by local customers</span>
+  </div>
+  <div class="hero-label">Mobile Auto Detailing</div>
+  <h1 class="hero-title">
+    Mobile Car Detailing in <span class="accent">Imperial Valley</span>
+    <span class="we-come">— We Come To You</span>
+  </h1>
+  <p class="hero-sub">Professional interior, exterior &amp; full detail packages. Calexico, El Centro, Brawley &amp; surrounding areas — your driveway is our shop.</p>
+  <div class="hero-cta">
+    <a href="tel:7609251862" class="btn btn-primary">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      Call Now
+    </a>
+    <a href="#pricing" class="btn btn-secondary">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+      See Pricing
+    </a>
+    <a href="#contact" class="btn btn-outline">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+      Make an Inquiry
+    </a>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item">
+      <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/><circle cx="6" cy="20" r="2"/></svg></div>
+      <div class="trust-text">Fully Mobile<br><span style="color:var(--gray);font-weight:500;font-size:0.78rem">We Come To You</span></div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+      <div class="trust-text">100% Satisfaction<br><span style="color:var(--gray);font-weight:500;font-size:0.78rem">Guaranteed</span></div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+      <div class="trust-text">Fast Response<br><span style="color:var(--gray);font-weight:500;font-size:0.78rem">Quick Turnaround</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- BEFORE & AFTER GALLERY -->
+<!-- UNHIDE: Remove section--hidden class from this section when you have real before/after photos -->
+<section id="before-after" class="section--hidden">
+  <div class="section-inner">
+    <div class="fade-in">
+      <p class="section-eyebrow">The Difference</p>
+      <h2 class="section-title">Before &amp; After</h2>
+      <p class="section-sub">See real transformations from real customers in the Imperial Valley.</p>
+    </div>
+    <div class="ba-grid">
+      <div class="ba-pair fade-in">
+        <div class="ba-block ba-before"><div class="ba-label">Before</div><div class="ba-note">Photo coming soon — check back shortly</div></div>
+        <div class="ba-block ba-after"><div class="ba-label">After</div><div class="ba-note">Photo coming soon — check back shortly</div></div>
+      </div>
+      <div class="ba-pair fade-in">
+        <div class="ba-block ba-before"><div class="ba-label">Before</div><div class="ba-note">Photo coming soon — check back shortly</div></div>
+        <div class="ba-block ba-after"><div class="ba-label">After</div><div class="ba-note">Photo coming soon — check back shortly</div></div>
+      </div>
+      <div class="ba-pair fade-in">
+        <div class="ba-block ba-before"><div class="ba-label">Before</div><div class="ba-note">Photo coming soon — check back shortly</div></div>
+        <div class="ba-block ba-after"><div class="ba-label">After</div><div class="ba-note">Photo coming soon — check back shortly</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="section-inner">
+    <div class="fade-in">
+      <p class="section-eyebrow">Transparent Pricing</p>
+      <h2 class="section-title">Services &amp; Pricing</h2>
+      <p class="section-sub">No hidden fees. Upfront pricing for every service, every vehicle.</p>
+    </div>
+    <div class="pricing-grid">
+      <!-- Sedan -->
+      <div class="pricing-card fade-in">
+        <div class="pricing-card-head">
+          <div class="vehicle-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3a2 2 0 01-2-2v-4l2.5-5h11L17 11v4a2 2 0 01-2 2H5z"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="14.5" cy="17.5" r="1.5"/><path d="M21 17h1v-4l-2-4h-3v8h1"/></svg>
+          </div>
+          <div>
+            <div class="vehicle-name">Sedan</div>
+            <div class="vehicle-sub">Compact &amp; standard cars</div>
+          </div>
+        </div>
+        <div class="pricing-rows">
+          <div class="price-row">
+            <div><div class="price-label">Exterior Detail</div><div class="price-hint">Wash · foam · wheels · glass</div></div>
+            <div class="price-amount">$80</div>
+          </div>
+          <div class="price-row">
+            <div><div class="price-label">Interior Detail</div><div class="price-hint">Vacuum · wipe · vents · glass</div></div>
+            <div class="price-amount">$100</div>
+          </div>
+          <div class="price-row featured">
+            <div class="popular-badge">Most Popular</div>
+            <div><div class="price-label-main">Full Detail</div><div class="price-label-sub">Interior + Exterior</div></div>
+            <div class="price-amount">$150</div>
+          </div>
+        </div>
+      </div>
+      <!-- SUV -->
+      <div class="pricing-card fade-in">
+        <div class="pricing-card-head">
+          <div class="vehicle-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 16V9l3-4h11l3 4v7"/><path d="M2 13h17"/><circle cx="6" cy="17" r="2"/><circle cx="15" cy="17" r="2"/><path d="M19 16h3v1.5a1.5 1.5 0 01-1.5 1.5H19"/></svg>
+          </div>
+          <div>
+            <div class="vehicle-name">SUV</div>
+            <div class="vehicle-sub">Crossovers &amp; SUVs</div>
+          </div>
+        </div>
+        <div class="pricing-rows">
+          <div class="price-row">
+            <div><div class="price-label">Exterior Detail</div><div class="price-hint">Wash · foam · wheels · glass</div></div>
+            <div class="price-amount">$95</div>
+          </div>
+          <div class="price-row">
+            <div><div class="price-label">Interior Detail</div><div class="price-hint">Vacuum · wipe · vents · glass</div></div>
+            <div class="price-amount">$115</div>
+          </div>
+          <div class="price-row featured">
+            <div class="popular-badge">Most Popular</div>
+            <div><div class="price-label-main">Full Detail</div><div class="price-label-sub">Interior + Exterior</div></div>
+            <div class="price-amount">$180</div>
+          </div>
+        </div>
+      </div>
+      <!-- Truck -->
+      <div class="pricing-card fade-in">
+        <div class="pricing-card-head">
+          <div class="vehicle-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="9" width="13" height="8" rx="1"/><path d="M14 11h4l3 3v3h-7"/><circle cx="5" cy="19" r="2"/><circle cx="17" cy="19" r="2"/></svg>
+          </div>
+          <div>
+            <div class="vehicle-name">Truck</div>
+            <div class="vehicle-sub">Pickups &amp; large vehicles</div>
+          </div>
+        </div>
+        <div class="pricing-rows">
+          <div class="price-row">
+            <div><div class="price-label">Exterior Detail</div><div class="price-hint">Wash · foam · wheels · glass</div></div>
+            <div class="price-amount">$95</div>
+          </div>
+          <div class="price-row">
+            <div><div class="price-label">Interior Detail</div><div class="price-hint">Vacuum · wipe · vents · glass</div></div>
+            <div class="price-amount">$115</div>
+          </div>
+          <div class="price-row featured">
+            <div class="popular-badge">Most Popular</div>
+            <div><div class="price-label-main">Full Detail</div><div class="price-label-sub">Interior + Exterior</div></div>
+            <div class="price-amount">$180</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="pricing-note">* Prices may vary based on vehicle condition.</p>
+  </div>
+</section>
+
+<!-- WHAT'S INCLUDED -->
+<section id="included">
+  <div class="section-inner">
+    <div class="fade-in">
+      <p class="section-eyebrow">Every Service Includes</p>
+      <h2 class="section-title">What's Included</h2>
+      <p class="section-sub">Professional products and proper technique — every single time.</p>
+    </div>
+    <div class="included-grid">
+      <div class="included-card fade-in">
+        <div class="included-card-head">
+          <div class="inc-icon ext">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2z"/><path d="M2 12h3M19 12h3M12 5v3M12 16v3"/></svg>
+          </div>
+          <div>
+            <div class="inc-title">Exterior Services</div>
+            <div class="inc-sub">Outside — top to bottom</div>
+          </div>
+        </div>
+        <ul class="svc-list">
+          <li><span class="check"></span>Pre-soak foam application to break down road buildup</li>
+          <li><span class="check"></span>Wheel faces, barrels, and tires scrubbed clean</li>
+          <li><span class="check"></span>Insects, tar, and road film removed from the paint</li>
+          <li><span class="check"></span>Careful drying with clean microfiber cloths</li>
+          <li><span class="check"></span>Ceramic sealant spray applied for shine and surface protection (protects for 6 months)</li>
+          <li><span class="check"></span>Windows and mirrors streak-free clean</li>
+        </ul>
+      </div>
+      <div class="included-card fade-in">
+        <div class="included-card-head">
+          <div class="inc-icon int">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M3 9h18"/></svg>
+          </div>
+          <div>
+            <div class="inc-title">Interior Services</div>
+            <div class="inc-sub">Inside — every surface</div>
+          </div>
+        </div>
+        <ul class="svc-list">
+          <li><span class="check"></span>Detailed vacuum of floors, carpets, and trunk</li>
+          <li><span class="check"></span>Detailed wipe down of all interior surfaces</li>
+          <li><span class="check"></span>Plastics cleaned (dash, door panels, etc.)</li>
+          <li><span class="check"></span>All cracks &amp; crevices addressed</li>
+          <li><span class="check"></span>Floor mats cleaned</li>
+          <li><span class="check"></span>Leather conditioned</li>
+          <li><span class="check"></span>Windows cleaned to streak-free finish</li>
+          <li><span class="check"></span>Door jambs cleaned</li>
+          <li><span class="check"></span>Trunk cleaned</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADD-ONS -->
+<section id="addons">
+  <div class="section-inner">
+    <div class="fade-in">
+      <p class="section-eyebrow">Go Further</p>
+      <h2 class="section-title">Optional Add-On Services</h2>
+      <p class="section-sub">Specialized treatments available upon request — ask about availability when booking.</p>
+    </div>
+    <div class="addon-grid">
+      <div class="addon-card fade-in">
+        <div class="addon-top">
+          <div class="addon-name">Clay Bar Treatment</div>
+          <div class="addon-price">$50<small>From</small></div>
+        </div>
+        <div class="addon-desc">Deep exterior decontamination for a glass-smooth surface by removing bonded contaminants standard washing can't reach.</div>
+      </div>
+      <div class="addon-card fade-in">
+        <div class="addon-top">
+          <div class="addon-name">Engine Bay Cleaning</div>
+          <div class="addon-price">$60<small>From</small></div>
+        </div>
+        <div class="addon-desc">Safe and thorough engine compartment cleaning available upon request for qualifying vehicles.</div>
+      </div>
+      <div class="addon-card fade-in">
+        <div class="addon-top">
+          <div class="addon-name">Trim Restoration</div>
+          <div class="addon-price">$40<small>From</small></div>
+        </div>
+        <div class="addon-desc">Restore faded or weathered exterior trim to its original color and finish.</div>
+      </div>
+      <div class="addon-card fade-in">
+        <div class="addon-top">
+          <div class="addon-name">Headlight Restoration</div>
+          <div class="addon-price">$35<small>From</small></div>
+        </div>
+        <div class="addon-desc">Restore original clarity to yellowed or cloudy headlight lenses.</div>
+      </div>
+    </div>
+    <div class="addon-note fade-in">
+      <span class="addon-note-icon">ⓘ</span>
+      Add-on services depend on vehicle condition and are assessed at time of service. Pricing is discussed upfront — no surprises.
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="section-inner">
+    <div class="fade-in" style="text-align:center;max-width:600px;margin:0 auto">
+      <p class="section-eyebrow" style="justify-content:center">Got Questions?</p>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-sub" style="margin:0 auto">Everything you need to know before we come out to your driveway.</p>
+    </div>
+    <div class="faq-list fade-in">
+      <div class="faq-item">
+        <button class="faq-q">
+          <span>How far do you travel?</span>
+          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">We cover the entire Imperial Valley, from Brawley to Calexico and everywhere in between. Need service outside that area? Reach out — additional locations may be available upon request.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          <span>How long does a detail take?</span>
+          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">A full detail typically takes 2–3 hours depending on your vehicle's size and condition. We'll give you a better estimate when you book.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          <span>Do I need to be home during the detail?</span>
+          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">No — you don't need to be present for exterior services. If your appointment includes an interior detail, we'll just need access to the inside of your vehicle.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          <span>What if it rains on my appointment day?</span>
+          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">No problem at all. If rain affects your appointment, we'll reschedule at no cost to you — just let us know.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          <span>How do I book an appointment?</span>
+          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Easy — just call or text us at <strong style="color:var(--white)">(760) 925-1862</strong> and we'll get you set up. You can also send a message through the inquiry form on this page.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          <span>Do you detail motorcycles or other vehicles?</span>
+          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Yes! We detail various vehicle types beyond cars and trucks. Pricing may vary depending on the vehicle — just get in touch and we'll work something out.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          <span>How often should I get my car detailed?</span>
+          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Living in the Imperial Valley means your vehicle faces intense heat and dust year-round. We recommend detailing every 15 days for maximum protection. If that's not feasible, once a month or every other month — especially for garaged vehicles — will still go a long way in protecting your investment.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<!-- UNHIDE: Replace placeholder text with real reviews, then remove section--hidden class -->
+<section id="testimonials" class="section--hidden">
+  <div class="section-inner">
+    <div class="fade-in">
+      <p class="section-eyebrow">From Real Customers</p>
+      <h2 class="section-title">What People Are Saying</h2>
+      <p class="section-sub">Honest feedback from Imperial Valley customers.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card fade-in">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"[Customer review will appear here — currently collecting reviews]"</p>
+        <div class="testi-meta">
+          <div class="testi-avatar">M</div>
+          <div>
+            <div class="testi-name">Maria S.</div>
+            <div class="testi-vehicle">Honda Civic</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card fade-in">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"[Customer review will appear here — currently collecting reviews]"</p>
+        <div class="testi-meta">
+          <div class="testi-avatar">J</div>
+          <div>
+            <div class="testi-name">Jose R.</div>
+            <div class="testi-vehicle">Toyota Tacoma</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card fade-in">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"[Customer review will appear here — currently collecting reviews]"</p>
+        <div class="testi-meta">
+          <div class="testi-avatar">A</div>
+          <div>
+            <div class="testi-name">Ana L.</div>
+            <div class="testi-vehicle">Ford Explorer</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT ANDRE -->
+<section id="about">
+  <div class="section-inner">
+    <div class="fade-in">
+      <p class="section-eyebrow">Meet The Detailer</p>
+      <h2 class="section-title">About Andre &amp; ACleaning</h2>
+    </div>
+    <div class="about-grid">
+      <!-- PERSONALIZE: Add photo of Andre here — ideally next to his Genesis G70 -->
+      <div class="about-photo fade-in">
+        <div class="about-photo-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <div class="about-photo-text">Add photo of Andre here</div>
+        <div class="about-photo-sub">— ideally next to his Genesis G70</div>
+      </div>
+      <div class="about-text fade-in">
+        <p>Hi, I'm Andre Cabrera — the person who'll be showing up at your door and detailing your vehicle.</p>
+        <p>I graduated as a bioengineer, but my real passion has always been my cars. I've owned a Dodge Challenger, a Lexus IS, and currently drive a Genesis G70 — and every single one of them has been kept in showroom condition. Not because they're the most expensive cars on the road, but because I believe any car can look its absolute best with the right care and attention.</p>
+        <p>What started as a personal obsession grew into a real skill set, with professional-grade equipment to match. I detail cars the way I'd want mine detailed — thoroughly, carefully, and with genuine pride in the result.</p>
+        <p>My goal is simple: I want every customer to feel that same satisfaction of stepping into a clean, fresh car. Whether it's a daily driver or a weekend pride and joy, every ride deserves to look its best.</p>
+        <p>— Andre, ACleaning Mobile Detailer</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREA -->
+<section id="service-area">
+  <div class="section-inner">
+    <div class="fade-in">
+      <p class="section-eyebrow">Coverage</p>
+      <h2 class="section-title">Where We Serve</h2>
+      <p class="section-sub">Your driveway is our shop — across the Imperial Valley.</p>
+    </div>
+    <div class="area-card fade-in">
+      <p>Based in Calexico, we proudly serve the entire Imperial Valley — from Brawley in the north to Calexico in the south, and everywhere in between. Cities we regularly serve include:</p>
+      <div class="area-cities">
+        <span class="area-chip">Calexico</span>
+        <span class="area-chip">El Centro</span>
+        <span class="area-chip">Brawley</span>
+        <span class="area-chip">Holtville</span>
+        <span class="area-chip">Heber</span>
+        <span class="area-chip">+ surrounding communities</span>
+      </div>
+      <p>Not sure if we cover your area? Just call or text us at <a href="tel:7609251862" style="color:var(--red);font-weight:700;text-decoration:none">(760) 925-1862</a> — we'll let you know and do our best to accommodate you.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GOOGLE REVIEWS -->
+<!-- UNHIDE: Replace with embedded Google reviews widget or real review cards when GBP is verified -->
+<section id="reviews" class="section--hidden">
+  <div class="section-inner">
+    <div class="fade-in" style="text-align:center;max-width:600px;margin:0 auto">
+      <p class="section-eyebrow" style="justify-content:center">Google Reviews</p>
+      <h2 class="section-title">What Our Customers Say</h2>
+    </div>
+    <div class="reviews-placeholder fade-in">
+      <div class="reviews-placeholder-icon">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <p>Google reviews will appear here once our listing is verified. In the meantime, call us — we're happy to provide references.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / BOOKING -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="cta-box fade-in">
+      <div class="cta-glow"></div>
+      <p class="section-eyebrow" style="justify-content:center">Not Ready Yet? No Problem.</p>
+      <h2 class="cta-title">Make an inquiry — no commitment needed</h2>
+      <p class="cta-sub">Have questions? Want a quote? Call, text, WhatsApp, or send a message and we'll get back to you quickly.</p>
+      <div class="cta-actions">
+        <a href="tel:7609251862" class="cta-phone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          Call (760) 925-1862
+        </a>
+        <a href="https://wa.me/17609251862" class="cta-whatsapp" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.2-.6.1-.2.3-.7.9-.9 1.1-.1.2-.3.2-.6.1-1.6-.8-2.7-1.4-3.7-3.2-.3-.5.3-.4.7-1.4.1-.2 0-.3 0-.5 0-.1-.6-1.5-.8-2.1-.2-.6-.5-.5-.6-.5-.2 0-.4 0-.6 0-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3 4.8 4.2 1.8.7 2.5.8 3.4.7.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 22a10 10 0 01-5.1-1.4L2 22l1.4-4.9A10 10 0 1112 22z"/></svg>
+          Chat on WhatsApp
+        </a>
+      </div>
+      <div class="response-time">We typically respond within 2 hours during business hours.</div>
+      <div class="cta-divider">Or send a message</div>
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Name</label>
+            <input type="text" placeholder="First &amp; last name" required>
+          </div>
+          <div class="form-group">
+            <label>Phone</label>
+            <input type="tel" placeholder="(760) 000-0000" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Vehicle Type</label>
+          <select required>
+            <option value="">Select vehicle...</option>
+            <option>Sedan / Compact</option>
+            <option>SUV</option>
+            <option>Truck</option>
+            <option>Van / Minivan</option>
+            <option>Motorcycle</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Service</label>
+          <select required>
+            <option value="">Select service...</option>
+            <option>Exterior Detail</option>
+            <option>Interior Detail</option>
+            <option>Full Detail (Interior + Exterior)</option>
+            <option>Add-On / Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Message (Optional)</label>
+          <textarea rows="3" placeholder="Notes, location, preferred time..."></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send Message</button>
+      </form>
+      <p class="online-booking-note">Prefer to book online? <em>[Online booking coming soon]</em></p>
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM FEED -->
+<!-- UNHIDE: Replace with Elfsight or SnapWidget Instagram embed once your account is active -->
+<section id="instagram" class="section--hidden">
+  <div class="section-inner">
+    <div class="fade-in" style="text-align:center;max-width:600px;margin:0 auto">
+      <p class="section-eyebrow" style="justify-content:center">Follow Along</p>
+      <h2 class="section-title">From Our Instagram</h2>
+      <p class="section-sub" style="margin:0 auto">Behind-the-scenes shots, transformations, and more.</p>
+    </div>
+    <div class="ig-grid fade-in">
+      <div class="ig-tile">Instagram photo</div>
+      <div class="ig-tile">Instagram photo</div>
+      <div class="ig-tile">Instagram photo</div>
+      <div class="ig-tile">Instagram photo</div>
+      <div class="ig-tile">Instagram photo</div>
+      <div class="ig-tile">Instagram photo</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<!-- SEO: Once you have a real address or GBP verified, add your full address here for NAP consistency -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-logo"><span>A</span>Cleaning Mobile Detailer</div>
+        <p class="footer-tag">Professional mobile auto detailing serving the entire Imperial Valley. We come to you.</p>
+        <div class="footer-socials">
+          <!-- PERSONALIZE: Replace with real Instagram URL -->
+          <a href="https://instagram.com" class="footer-social" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <!-- PERSONALIZE: Replace with real Facebook URL -->
+          <a href="https://facebook.com" class="footer-social" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul class="footer-list">
+          <li><strong>(760) 925-1862</strong></li>
+          <li><a href="tel:7609251862">📞 Call us</a></li>
+          <li><a href="https://wa.me/17609251862" target="_blank" rel="noopener">💬 WhatsApp</a></li>
+          <li><a href="#contact">✉ Inquiry form</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Service Area</h4>
+        <ul class="footer-list">
+          <li>Calexico</li>
+          <li>El Centro</li>
+          <li>Brawley</li>
+          <li>Holtville &amp; Heber</li>
+          <li>Imperial Valley</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <ul class="footer-list">
+          <li><strong>Sunday – Friday</strong></li>
+          <li>6:00 AM – 9:00 PM</li>
+          <li style="margin-top:0.5rem;color:var(--gray)">Closed Saturdays</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2025 ACleaning Mobile Detailer · Calexico, CA · All rights reserved.</div>
+      <div class="footer-copy">Mobile auto detailing — Imperial Valley</div>
+    </div>
+  </div>
+</footer>
+
+<!-- STICKY MOBILE CTA BAR -->
+<div class="mobile-cta">
+  <a href="tel:7609251862" class="mobile-cta-call">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    Call Now
+  </a>
+  <a href="https://wa.me/17609251862" target="_blank" rel="noopener" class="mobile-cta-wa">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.2-.6.1-.2.3-.7.9-.9 1.1-.1.2-.3.2-.6.1-1.6-.8-2.7-1.4-3.7-3.2-.3-.5.3-.4.7-1.4.1-.2 0-.3 0-.5 0-.1-.6-1.5-.8-2.1-.2-.6-.5-.5-.6-.5-.2 0-.4 0-.6 0-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3 4.8 4.2 1.8.7 2.5.8 3.4.7.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 22a10 10 0 01-5.1-1.4L2 22l1.4-4.9A10 10 0 1112 22z"/></svg>
+    WhatsApp
+  </a>
+</div>
+
+<script>
+// Fade-in scroll observer
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.parentElement;
+    const wasOpen = item.classList.contains('open');
+    // Close all others
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    // Toggle current
+    if (!wasOpen) item.classList.add('open');
+  });
+});
+
+// Contact form submission with success toast
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const t = document.getElementById('toast');
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3500);
+  this.reset();
+});
+</script>
+</body>
+</html>
