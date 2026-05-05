@@ -85,6 +85,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,10,0.8
 .nav-insta{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:6px;border:1px solid var(--border);color:var(--gray-light);transition:color 0.2s,border-color 0.2s,background 0.2s}
 .nav-insta:hover{color:var(--white);border-color:#555;background:rgba(255,255,255,0.03)}
 .nav-insta svg{width:17px;height:17px}
+.nav-book{display:flex;align-items:center;gap:0.45rem;color:var(--white);text-decoration:none;font-size:0.85rem;font-weight:700;background:transparent;border:1px solid rgba(255,255,255,0.2);padding:0.5rem 1rem;border-radius:6px;transition:background 0.2s,border-color 0.2s,transform 0.1s;letter-spacing:0.01em}
+.nav-book:hover{background:rgba(255,255,255,0.07);border-color:rgba(255,255,255,0.4)}
+.nav-book:active{transform:scale(0.97)}
+.nav-book svg{width:14px;height:14px;flex-shrink:0}
 @media(max-width:540px){
   .nav-phone span.nav-phone-text{display:none}
   .nav-phone{padding:0.5rem 0.75rem}
@@ -302,38 +306,88 @@ section{padding:5rem 1.25rem;position:relative}
 .reviews-placeholder-icon{width:60px;height:60px;border-radius:50%;background:rgba(255,255,255,0.04);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;color:var(--gold)}
 .reviews-placeholder p{color:var(--gray-light);font-size:0.95rem;line-height:1.6;max-width:480px;margin:0 auto}
 
-/* BOOKING SECTION */
+/* BOOKING + CONTACT SECTION */
 #contact{background:linear-gradient(180deg,var(--black) 0%,var(--dark) 100%)}
 .cta-box{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:3rem 2rem;text-align:center;position:relative;overflow:hidden;box-shadow:var(--shadow-card)}
 .cta-glow{position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:600px;height:300px;background:radial-gradient(ellipse,rgba(200,16,46,0.18) 0%,transparent 65%);pointer-events:none}
 .cta-title{font-family:var(--ff-display);font-size:clamp(1.6rem,4.5vw,2.3rem);font-weight:800;color:var(--white);margin-bottom:0.6rem;position:relative;letter-spacing:-0.025em;line-height:1.15}
 .cta-sub{color:var(--gray-light);margin-bottom:2rem;font-size:0.95rem;position:relative;max-width:480px;margin-left:auto;margin-right:auto}
-.cta-actions{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;margin-bottom:1.25rem;position:relative}
-.cta-phone{display:inline-flex;align-items:center;gap:0.6rem;background:var(--red);color:var(--white);text-decoration:none;padding:1rem 2rem;border-radius:9px;font-size:1.05rem;font-weight:800;transition:background 0.2s,box-shadow 0.2s,transform 0.1s;letter-spacing:0.01em;box-shadow:0 4px 20px rgba(200,16,46,0.35),inset 0 1px 0 rgba(255,255,255,0.15)}
-.cta-phone:hover{background:var(--red-dark);box-shadow:0 6px 24px rgba(200,16,46,0.45),inset 0 1px 0 rgba(255,255,255,0.15)}
-.cta-phone:active{transform:translateY(1px)}
-.cta-phone svg{width:20px;height:20px}
-.cta-whatsapp{display:inline-flex;align-items:center;gap:0.55rem;background:#25D366;color:#0A0A0A;text-decoration:none;padding:1rem 1.75rem;border-radius:9px;font-size:1rem;font-weight:800;transition:background 0.2s,transform 0.1s;letter-spacing:0.01em;box-shadow:0 4px 20px rgba(37,211,102,0.25),inset 0 1px 0 rgba(255,255,255,0.25)}
-.cta-whatsapp:hover{background:#1ec05b}
-.cta-whatsapp:active{transform:translateY(1px)}
-.cta-whatsapp svg{width:20px;height:20px}
 .response-time{font-size:0.83rem;color:var(--gray-light);margin-bottom:1.25rem;position:relative;display:inline-flex;align-items:center;gap:0.5rem}
 .response-time::before{content:'';width:8px;height:8px;border-radius:50%;background:#25D366;box-shadow:0 0 0 4px rgba(37,211,102,0.15);animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{box-shadow:0 0 0 4px rgba(37,211,102,0.15)}50%{box-shadow:0 0 0 8px rgba(37,211,102,0.05)}}
 .cta-divider{display:flex;align-items:center;gap:1rem;margin:1.75rem 0;color:var(--gray);font-size:0.78rem;position:relative;font-weight:600;letter-spacing:0.08em;text-transform:uppercase}
 .cta-divider::before,.cta-divider::after{content:'';flex:1;height:1px;background:var(--border)}
 
-/* Square booking widget wrapper */
-.square-booking-wrap{
-  margin-top:1.5rem;
-  position:relative;
-  z-index:1;
+/* Custom Book Button */
+.book-btn-wrap{margin-bottom:0.5rem;position:relative}
+.book-btn{
+  display:inline-flex;align-items:center;gap:0.75rem;
+  background:var(--red);color:var(--white);text-decoration:none;
+  padding:1.1rem 2.5rem;border-radius:10px;font-size:1.1rem;font-weight:800;
+  letter-spacing:0.01em;font-family:var(--ff);cursor:pointer;border:none;
+  transition:background 0.2s,box-shadow 0.2s,transform 0.1s;
+  box-shadow:0 4px 24px rgba(200,16,46,0.4),inset 0 1px 0 rgba(255,255,255,0.15);
 }
-.square-booking-wrap p{
-  font-size:0.8rem;
-  color:var(--gray);
-  margin-top:1rem;
-  font-style:italic;
+.book-btn:hover{background:var(--red-dark);box-shadow:0 6px 32px rgba(200,16,46,0.5),inset 0 1px 0 rgba(255,255,255,0.15)}
+.book-btn:active{transform:translateY(1px)}
+.book-btn svg{width:20px;height:20px;flex-shrink:0}
+.book-deposit-note{
+  display:inline-flex;align-items:center;gap:0.5rem;
+  margin-top:0.85rem;background:rgba(229,184,63,0.08);
+  border:1px solid rgba(229,184,63,0.3);border-radius:8px;
+  padding:0.55rem 1rem;font-size:0.8rem;color:var(--gold);font-weight:600;
+}
+.book-deposit-note svg{width:14px;height:14px;flex-shrink:0}
+.book-alt-links{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;margin-top:1.25rem}
+.book-alt-links a{display:inline-flex;align-items:center;gap:0.45rem;font-size:0.88rem;font-weight:700;text-decoration:none;padding:0.6rem 1.1rem;border-radius:7px;transition:background 0.2s,transform 0.1s;border:1px solid var(--border)}
+.book-alt-links a:active{transform:scale(0.97)}
+.book-alt-call{color:var(--white);background:rgba(255,255,255,0.04)}
+.book-alt-call:hover{background:rgba(255,255,255,0.09);border-color:#444}
+.book-alt-wa{color:#25D366;background:rgba(37,211,102,0.06)}
+.book-alt-wa:hover{background:rgba(37,211,102,0.12);border-color:rgba(37,211,102,0.35)}
+.book-alt-links svg{width:15px;height:15px}
+
+/* Quote / Contact Form */
+.quote-form-wrap{max-width:560px;margin:0 auto;text-align:left}
+.quote-form{display:grid;gap:1rem}
+.qf-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.qf-group{display:flex;flex-direction:column;gap:0.35rem}
+.qf-group label{font-size:0.72rem;font-weight:700;color:var(--gray-light);letter-spacing:0.1em;text-transform:uppercase}
+.qf-group input,.qf-group select,.qf-group textarea{
+  background:var(--card2);border:1px solid var(--border);color:var(--white);
+  border-radius:8px;padding:0.8rem 1rem;font-size:0.9rem;font-family:var(--ff);
+  transition:border-color 0.2s,background 0.2s;outline:none;resize:vertical;
+}
+.qf-group input:focus,.qf-group select:focus,.qf-group textarea:focus{border-color:var(--red);background:#252525}
+.qf-group input::placeholder,.qf-group textarea::placeholder{color:#555}
+.qf-group select option{background:var(--card2);color:var(--white)}
+
+/* Service checkboxes */
+.services-label{font-size:0.72rem;font-weight:700;color:var(--gray-light);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.5rem;display:block}
+.services-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem}
+.svc-check{display:flex;align-items:center;gap:0.65rem;background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:0.7rem 0.9rem;cursor:pointer;transition:border-color 0.2s,background 0.2s;user-select:none}
+.svc-check:hover{border-color:#444;background:#252525}
+.svc-check input[type=checkbox]{display:none}
+.svc-check-box{width:18px;height:18px;border-radius:5px;border:1.5px solid var(--border-light);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:background 0.15s,border-color 0.15s;background:transparent}
+.svc-check input:checked ~ .svc-check-box{background:var(--red);border-color:var(--red)}
+.svc-check input:checked ~ .svc-check-box::after{content:'';width:9px;height:5px;border-left:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(-45deg) translateY(-1px)}
+.svc-check-label{font-size:0.86rem;font-weight:600;color:var(--text);line-height:1.3}
+.svc-check.unsure{border-color:rgba(229,184,63,0.25);background:rgba(229,184,63,0.04)}
+.svc-check.unsure:hover{border-color:rgba(229,184,63,0.45)}
+.svc-check.unsure input:checked ~ .svc-check-box{background:var(--gold);border-color:var(--gold)}
+.svc-check.unsure .svc-check-label{color:var(--gold)}
+
+/* Form submit */
+.qf-submit{background:var(--red);color:var(--white);border:none;padding:1rem;border-radius:9px;font-size:1rem;font-weight:800;cursor:pointer;transition:background 0.2s,transform 0.1s;font-family:var(--ff);letter-spacing:0.02em;box-shadow:0 4px 16px rgba(200,16,46,0.3),inset 0 1px 0 rgba(255,255,255,0.15);width:100%}
+.qf-submit:hover{background:var(--red-dark)}
+.qf-submit:active{transform:translateY(1px)}
+.qf-success{display:none;background:rgba(37,211,102,0.08);border:1px solid rgba(37,211,102,0.3);border-radius:10px;padding:1.25rem;text-align:center;color:#25D366;font-weight:700;font-size:0.95rem;margin-top:0.5rem}
+.qf-success.show{display:block}
+
+@media(max-width:540px){
+  .qf-row{grid-template-columns:1fr}
+  .services-grid{grid-template-columns:1fr}
+  .book-btn{font-size:1rem;padding:1rem 1.75rem}
 }
 
 /* INSTAGRAM FEED (HIDDEN) */
@@ -419,6 +473,10 @@ footer{background:#070707;border-top:1px solid var(--border);padding:3rem 1.25re
       <a href="https://www.instagram.com/acleanermobile/" class="nav-insta" target="_blank" rel="noopener" aria-label="Instagram">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
       </a>
+      <a href="https://app.squareup.com/appointments/buyer/widget/is5svlslr6bxq2/LGXHP16A8SRRW" target="_blank" rel="noopener" class="nav-book">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        <span class="nav-book-text">Book Online</span>
+      </a>
       <a href="tel:7609251862" class="nav-phone">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
         <span class="nav-phone-text">Call Now</span>
@@ -441,13 +499,9 @@ footer{background:#070707;border-top:1px solid var(--border);padding:3rem 1.25re
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
       Call Now
     </a>
-    <a href="#pricing" class="btn btn-secondary">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
-      See Pricing
-    </a>
     <a href="#contact" class="btn btn-outline">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-      Book Appointment
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+      Start Your Quote
     </a>
   </div>
 </section>
@@ -825,24 +879,128 @@ footer{background:#070707;border-top:1px solid var(--border);padding:3rem 1.25re
   </div>
 </section>
 
-<!-- BOOK AN APPOINTMENT -->
+<!-- BOOK + CONTACT -->
 <section id="contact">
   <div class="section-inner">
     <div class="cta-box fade-in">
       <div class="cta-glow"></div>
-      <p class="section-eyebrow" style="justify-content:center">Ready to Book?</p>
-      <h2 class="cta-title">Schedule your appointment online</h2>
-      <p class="cta-sub">Pick your service, choose a time, and pay securely — all in one place. Or reach us directly below.</p>
 
-      <!-- Square Appointments Booking Widget -->
-      <div class="square-booking-wrap">
-        <!-- Start Square Appointments Embed Code -->
-        <script src='https://app.squareup.com/appointments/buyer/widget/is5svlslr6bxq2/LGXHP16A8SRRW.js'></script>
-        <!-- End Square Appointments Embed Code -->
-        <p>Prefer to talk? Call or text us at <a href="tel:7609251862" style="color:var(--red);font-weight:700;text-decoration:none">(760) 925-1862</a> or chat on <a href="https://wa.me/17609251862" target="_blank" rel="noopener" style="color:#25D366;font-weight:700;text-decoration:none">WhatsApp</a>.</p>
+      <!-- BOOK ONLINE -->
+      <p class="section-eyebrow" style="justify-content:center">Ready to Go?</p>
+      <h2 class="cta-title">Book your detail online</h2>
+      <p class="cta-sub" style="margin-bottom:1.5rem">Pick your service, choose a date, and secure your spot — all in a few taps.</p>
+
+      <div class="book-btn-wrap">
+        <a href="https://app.squareup.com/appointments/buyer/widget/is5svlslr6bxq2/LGXHP16A8SRRW" target="_blank" rel="noopener" class="book-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Book an Appointment
+        </a>
+        <div style="display:flex;justify-content:center;margin-top:0.85rem">
+          <a href="tel:7609251862" class="book-btn" style="background:transparent;border:1px solid rgba(255,255,255,0.18);box-shadow:none;font-size:1rem;padding:0.9rem 2rem">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            Call Now
+          </a>
+        </div>
       </div>
 
-      <div class="response-time" style="margin-top:1.5rem">We typically respond within 2 hours during business hours.</div>
+      <!-- OR divider -->
+      <div style="margin:2rem 0;position:relative">
+        <div style="position:absolute;top:50%;left:0;right:0;height:1px;background:var(--border)"></div>
+        <span style="position:relative;background:var(--card);padding:0 1.25rem;font-family:var(--ff-display);font-size:2rem;font-weight:800;color:var(--white);letter-spacing:-0.02em">OR</span>
+      </div>
+
+      <!-- DIVIDER -->
+      <div class="cta-divider" style="margin-top:0">Not ready to book? Send a quote request</div>
+
+      <!-- QUOTE / CONTACT FORM -->
+      <!-- ACTION: Replace YOUR_EMAIL_HERE with your actual email after signing up at formspree.io -->
+      <div class="quote-form-wrap">
+        <form class="quote-form" id="quoteForm" action="https://formspree.io/f/mdabzapk" method="POST">
+          <div class="qf-row">
+            <div class="qf-group">
+              <label>First Name *</label>
+              <input type="text" name="first_name" placeholder="First name" required>
+            </div>
+            <div class="qf-group">
+              <label>Last Name *</label>
+              <input type="text" name="last_name" placeholder="Last name" required>
+            </div>
+          </div>
+          <div class="qf-row">
+            <div class="qf-group">
+              <label>Phone *</label>
+              <input type="tel" name="phone" placeholder="(760) 000-0000" required>
+            </div>
+            <div class="qf-group">
+              <label>Email *</label>
+              <input type="email" name="email" placeholder="your@email.com" required>
+            </div>
+          </div>
+          <div class="qf-group">
+            <label>Vehicle Year, Make &amp; Model *</label>
+            <input type="text" name="vehicle" placeholder="e.g. 2021 Toyota Camry" required>
+          </div>
+
+          <!-- Services -->
+          <div>
+            <span class="services-label">Services Interested In (check all that apply)</span>
+            <div class="services-grid">
+              <label class="svc-check">
+                <input type="checkbox" name="services" value="Exterior Detail">
+                <span class="svc-check-box"></span>
+                <span class="svc-check-label">Exterior Detail</span>
+              </label>
+              <label class="svc-check">
+                <input type="checkbox" name="services" value="Interior Detail">
+                <span class="svc-check-box"></span>
+                <span class="svc-check-label">Interior Detail</span>
+              </label>
+              <label class="svc-check">
+                <input type="checkbox" name="services" value="Full Detail">
+                <span class="svc-check-box"></span>
+                <span class="svc-check-label">Full Detail (Int + Ext)</span>
+              </label>
+              <label class="svc-check">
+                <input type="checkbox" name="services" value="Clay Bar Treatment">
+                <span class="svc-check-box"></span>
+                <span class="svc-check-label">Clay Bar Treatment</span>
+              </label>
+              <label class="svc-check">
+                <input type="checkbox" name="services" value="Engine Bay Cleaning">
+                <span class="svc-check-box"></span>
+                <span class="svc-check-label">Engine Bay Cleaning</span>
+              </label>
+              <label class="svc-check">
+                <input type="checkbox" name="services" value="Trim Restoration">
+                <span class="svc-check-box"></span>
+                <span class="svc-check-label">Trim Restoration</span>
+              </label>
+              <label class="svc-check">
+                <input type="checkbox" name="services" value="Headlight Restoration">
+                <span class="svc-check-box"></span>
+                <span class="svc-check-label">Headlight Restoration</span>
+              </label>
+              <label class="svc-check unsure">
+                <input type="checkbox" name="services" value="Not sure yet">
+                <span class="svc-check-box"></span>
+                <span class="svc-check-label">Not sure yet</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="qf-group">
+            <label>Message (Optional)</label>
+            <textarea name="message" rows="3" placeholder="Questions, preferred time, location, vehicle condition..."></textarea>
+          </div>
+
+          <button type="submit" class="qf-submit">Send Quote Request</button>
+          <div class="qf-success" id="quoteSuccess">
+            ✓ Message sent! We'll get back to you within 2 hours during business hours.
+          </div>
+        </form>
+      </div>
+
+      <div class="response-time" style="margin-top:1.5rem;justify-content:center">We typically respond within 2 hours during business hours.</div>
     </div>
   </div>
 </section>
@@ -950,6 +1108,37 @@ document.querySelectorAll('.faq-q').forEach(btn => {
     if (!wasOpen) item.classList.add('open');
   });
 });
+
+// Quote form — Formspree AJAX submission
+const quoteForm = document.getElementById('quoteForm');
+if (quoteForm) {
+  quoteForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = this.querySelector('.qf-submit');
+    const success = document.getElementById('quoteSuccess');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    try {
+      const res = await fetch(this.action, {
+        method: 'POST',
+        body: new FormData(this),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        success.classList.add('show');
+        this.reset();
+        btn.textContent = 'Send Quote Request';
+        btn.disabled = false;
+      } else {
+        btn.textContent = 'Error — try again';
+        btn.disabled = false;
+      }
+    } catch {
+      btn.textContent = 'Error — try again';
+      btn.disabled = false;
+    }
+  });
+}
 </script>
 </body>
 </html>
