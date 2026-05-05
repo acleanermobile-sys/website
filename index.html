@@ -302,7 +302,7 @@ section{padding:5rem 1.25rem;position:relative}
 .reviews-placeholder-icon{width:60px;height:60px;border-radius:50%;background:rgba(255,255,255,0.04);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;color:var(--gold)}
 .reviews-placeholder p{color:var(--gray-light);font-size:0.95rem;line-height:1.6;max-width:480px;margin:0 auto}
 
-/* CONTACT */
+/* BOOKING SECTION */
 #contact{background:linear-gradient(180deg,var(--black) 0%,var(--dark) 100%)}
 .cta-box{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:3rem 2rem;text-align:center;position:relative;overflow:hidden;box-shadow:var(--shadow-card)}
 .cta-glow{position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:600px;height:300px;background:radial-gradient(ellipse,rgba(200,16,46,0.18) 0%,transparent 65%);pointer-events:none}
@@ -322,18 +322,19 @@ section{padding:5rem 1.25rem;position:relative}
 @keyframes pulse{0%,100%{box-shadow:0 0 0 4px rgba(37,211,102,0.15)}50%{box-shadow:0 0 0 8px rgba(37,211,102,0.05)}}
 .cta-divider{display:flex;align-items:center;gap:1rem;margin:1.75rem 0;color:var(--gray);font-size:0.78rem;position:relative;font-weight:600;letter-spacing:0.08em;text-transform:uppercase}
 .cta-divider::before,.cta-divider::after{content:'';flex:1;height:1px;background:var(--border)}
-.contact-form{display:grid;gap:0.85rem;max-width:480px;margin:0 auto;text-align:left;position:relative}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:0.85rem}
-.form-group{display:flex;flex-direction:column;gap:0.35rem}
-.form-group label{font-size:0.74rem;font-weight:700;color:var(--gray-light);letter-spacing:0.08em;text-transform:uppercase}
-.form-group input,.form-group select,.form-group textarea{background:var(--card2);border:1px solid var(--border);color:var(--white);border-radius:8px;padding:0.8rem 1rem;font-size:0.9rem;font-family:var(--ff);transition:border-color 0.2s,background 0.2s;resize:vertical;outline:none}
-.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--red);background:#252525}
-.form-group select option{background:var(--card2);color:var(--white)}
-.form-group input::placeholder,.form-group textarea::placeholder{color:#555}
-.form-submit{background:var(--red);color:var(--white);border:none;padding:0.95rem;border-radius:9px;font-size:1rem;font-weight:800;cursor:pointer;transition:background 0.2s,transform 0.1s;font-family:var(--ff);letter-spacing:0.02em;box-shadow:0 4px 16px rgba(200,16,46,0.3),inset 0 1px 0 rgba(255,255,255,0.15)}
-.form-submit:hover{background:var(--red-dark)}
-.form-submit:active{transform:translateY(1px)}
-.online-booking-note{margin-top:1rem;font-size:0.8rem;color:var(--gray);text-align:center;font-style:italic}
+
+/* Square booking widget wrapper */
+.square-booking-wrap{
+  margin-top:1.5rem;
+  position:relative;
+  z-index:1;
+}
+.square-booking-wrap p{
+  font-size:0.8rem;
+  color:var(--gray);
+  margin-top:1rem;
+  font-style:italic;
+}
 
 /* INSTAGRAM FEED (HIDDEN) */
 #instagram{background:var(--black)}
@@ -393,20 +394,12 @@ footer{background:#070707;border-top:1px solid var(--border);padding:3rem 1.25re
 .fade-in{opacity:0;transform:translateY(22px);transition:opacity 0.6s ease,transform 0.6s ease}
 .fade-in.visible{opacity:1;transform:none}
 
-/* TOAST */
-#toast{position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%) translateY(140%);background:var(--card2);border:1px solid var(--red);color:var(--white);padding:0.95rem 1.5rem;border-radius:9px;font-size:0.9rem;font-weight:700;z-index:999;transition:transform 0.4s cubic-bezier(0.4,0,0.2,1);pointer-events:none;white-space:nowrap;box-shadow:0 8px 32px rgba(0,0,0,0.5),0 0 0 1px rgba(200,16,46,0.2)}
-#toast.show{transform:translateX(-50%) translateY(0)}
-@media(max-width:768px){
-  #toast{bottom:5rem}
-}
-
 /* HIDDEN SECTIONS - controlled centrally */
 .section--hidden{display:none}
 
 /* MOBILE TWEAKS */
 @media(max-width:540px){
   section{padding:3.5rem 1.25rem}
-  .form-row{grid-template-columns:1fr}
   .cta-box{padding:2.25rem 1.25rem}
   .cta-phone{font-size:1rem;padding:0.95rem 1.5rem}
   .area-card{padding:1.75rem 1.5rem}
@@ -418,14 +411,11 @@ footer{background:#070707;border-top:1px solid var(--border);padding:3rem 1.25re
 </head>
 <body>
 
-<!-- Toast notification (form success) -->
-
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
     <div class="nav-logo"><span>A</span>Cleaning Mobile Detailer</div>
     <div class="nav-right">
-      <!-- PERSONALIZE: Replace with real Instagram URL when account is set up -->
       <a href="https://www.instagram.com/acleanermobile/" class="nav-insta" target="_blank" rel="noopener" aria-label="Instagram">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
       </a>
@@ -456,8 +446,8 @@ footer{background:#070707;border-top:1px solid var(--border);padding:3rem 1.25re
       See Pricing
     </a>
     <a href="#contact" class="btn btn-outline">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-      Make an Inquiry
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      Book Appointment
     </a>
   </div>
 </section>
@@ -481,7 +471,6 @@ footer{background:#070707;border-top:1px solid var(--border);padding:3rem 1.25re
 </div>
 
 <!-- BEFORE & AFTER GALLERY -->
-<!-- UNHIDE: Remove section--hidden class from this section when you have real before/after photos -->
 <section id="before-after" class="section--hidden">
   <div class="section-inner">
     <div class="fade-in">
@@ -491,16 +480,16 @@ footer{background:#070707;border-top:1px solid var(--border);padding:3rem 1.25re
     </div>
     <div class="ba-grid">
       <div class="ba-pair fade-in">
-        <div class="ba-block ba-before"><div class="ba-label">Before</div><div class="ba-note">Photo coming soon — check back shortly</div></div>
-        <div class="ba-block ba-after"><div class="ba-label">After</div><div class="ba-note">Photo coming soon — check back shortly</div></div>
+        <div class="ba-block ba-before"><div class="ba-label">Before</div><div class="ba-note">Photo coming soon</div></div>
+        <div class="ba-block ba-after"><div class="ba-label">After</div><div class="ba-note">Photo coming soon</div></div>
       </div>
       <div class="ba-pair fade-in">
-        <div class="ba-block ba-before"><div class="ba-label">Before</div><div class="ba-note">Photo coming soon — check back shortly</div></div>
-        <div class="ba-block ba-after"><div class="ba-label">After</div><div class="ba-note">Photo coming soon — check back shortly</div></div>
+        <div class="ba-block ba-before"><div class="ba-label">Before</div><div class="ba-note">Photo coming soon</div></div>
+        <div class="ba-block ba-after"><div class="ba-label">After</div><div class="ba-note">Photo coming soon</div></div>
       </div>
       <div class="ba-pair fade-in">
-        <div class="ba-block ba-before"><div class="ba-label">Before</div><div class="ba-note">Photo coming soon — check back shortly</div></div>
-        <div class="ba-block ba-after"><div class="ba-label">After</div><div class="ba-note">Photo coming soon — check back shortly</div></div>
+        <div class="ba-block ba-before"><div class="ba-label">Before</div><div class="ba-note">Photo coming soon</div></div>
+        <div class="ba-block ba-after"><div class="ba-label">After</div><div class="ba-note">Photo coming soon</div></div>
       </div>
     </div>
   </div>
@@ -714,7 +703,7 @@ footer{background:#070707;border-top:1px solid var(--border);padding:3rem 1.25re
           <span>How do I book an appointment?</span>
           <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
         </button>
-        <div class="faq-a"><div class="faq-a-inner">Easy — just call or text us at <strong style="color:var(--white)">(760) 925-1862</strong> and we'll get you set up. You can also send a message through the inquiry form on this page.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">Easy — use the online booking widget on this page to pick your service, choose a time, and pay securely. You can also call or text us at <strong style="color:var(--white)">(760) 925-1862</strong> if you prefer.</div></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">
@@ -735,7 +724,6 @@ footer{background:#070707;border-top:1px solid var(--border);padding:3rem 1.25re
 </section>
 
 <!-- TESTIMONIALS -->
-<!-- UNHIDE: Replace placeholder text with real reviews, then remove section--hidden class -->
 <section id="testimonials" class="section--hidden">
   <div class="section-inner">
     <div class="fade-in">
@@ -749,10 +737,7 @@ footer{background:#070707;border-top:1px solid var(--border);padding:3rem 1.25re
         <p class="testi-quote">"[Customer review will appear here — currently collecting reviews]"</p>
         <div class="testi-meta">
           <div class="testi-avatar">M</div>
-          <div>
-            <div class="testi-name">Maria S.</div>
-            <div class="testi-vehicle">Honda Civic</div>
-          </div>
+          <div><div class="testi-name">Maria S.</div><div class="testi-vehicle">Honda Civic</div></div>
         </div>
       </div>
       <div class="testi-card fade-in">
@@ -760,10 +745,7 @@ footer{background:#070707;border-top:1px solid var(--border);padding:3rem 1.25re
         <p class="testi-quote">"[Customer review will appear here — currently collecting reviews]"</p>
         <div class="testi-meta">
           <div class="testi-avatar">J</div>
-          <div>
-            <div class="testi-name">Jose R.</div>
-            <div class="testi-vehicle">Toyota Tacoma</div>
-          </div>
+          <div><div class="testi-name">Jose R.</div><div class="testi-vehicle">Toyota Tacoma</div></div>
         </div>
       </div>
       <div class="testi-card fade-in">
@@ -771,10 +753,7 @@ footer{background:#070707;border-top:1px solid var(--border);padding:3rem 1.25re
         <p class="testi-quote">"[Customer review will appear here — currently collecting reviews]"</p>
         <div class="testi-meta">
           <div class="testi-avatar">A</div>
-          <div>
-            <div class="testi-name">Ana L.</div>
-            <div class="testi-vehicle">Ford Explorer</div>
-          </div>
+          <div><div class="testi-name">Ana L.</div><div class="testi-vehicle">Ford Explorer</div></div>
         </div>
       </div>
     </div>
@@ -789,7 +768,6 @@ footer{background:#070707;border-top:1px solid var(--border);padding:3rem 1.25re
       <h2 class="section-title">About Andre &amp; ACleaning</h2>
     </div>
     <div class="about-grid">
-      <!-- PERSONALIZE: Add photo of Andre here — ideally next to his Genesis G70 -->
       <div class="about-photo fade-in">
         <div class="about-photo-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
@@ -832,7 +810,6 @@ footer{background:#070707;border-top:1px solid var(--border);padding:3rem 1.25re
 </section>
 
 <!-- GOOGLE REVIEWS -->
-<!-- UNHIDE: Replace with embedded Google reviews widget or real review cards when GBP is verified -->
 <section id="reviews" class="section--hidden">
   <div class="section-inner">
     <div class="fade-in" style="text-align:center;max-width:600px;margin:0 auto">
@@ -848,72 +825,29 @@ footer{background:#070707;border-top:1px solid var(--border);padding:3rem 1.25re
   </div>
 </section>
 
-<!-- CONTACT / BOOKING -->
+<!-- BOOK AN APPOINTMENT -->
 <section id="contact">
   <div class="section-inner">
     <div class="cta-box fade-in">
       <div class="cta-glow"></div>
-      <p class="section-eyebrow" style="justify-content:center">Not Ready Yet? No Problem.</p>
-      <h2 class="cta-title">Make an inquiry — no commitment needed</h2>
-      <p class="cta-sub">Have questions? Want a quote? Call, text, WhatsApp, or send a message and we'll get back to you quickly.</p>
-      <div class="cta-actions">
-        <a href="tel:7609251862" class="cta-phone">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-          Call (760) 925-1862
-        </a>
-        <a href="https://wa.me/17609251862" class="cta-whatsapp" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.2-.6.1-.2.3-.7.9-.9 1.1-.1.2-.3.2-.6.1-1.6-.8-2.7-1.4-3.7-3.2-.3-.5.3-.4.7-1.4.1-.2 0-.3 0-.5 0-.1-.6-1.5-.8-2.1-.2-.6-.5-.5-.6-.5-.2 0-.4 0-.6 0-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3 4.8 4.2 1.8.7 2.5.8 3.4.7.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 22a10 10 0 01-5.1-1.4L2 22l1.4-4.9A10 10 0 1112 22z"/></svg>
-          Chat on WhatsApp
-        </a>
+      <p class="section-eyebrow" style="justify-content:center">Ready to Book?</p>
+      <h2 class="cta-title">Schedule your appointment online</h2>
+      <p class="cta-sub">Pick your service, choose a time, and pay securely — all in one place. Or reach us directly below.</p>
+
+      <!-- Square Appointments Booking Widget -->
+      <div class="square-booking-wrap">
+        <!-- Start Square Appointments Embed Code -->
+        <script src='https://app.squareup.com/appointments/buyer/widget/is5svlslr6bxq2/LGXHP16A8SRRW.js'></script>
+        <!-- End Square Appointments Embed Code -->
+        <p>Prefer to talk? Call or text us at <a href="tel:7609251862" style="color:var(--red);font-weight:700;text-decoration:none">(760) 925-1862</a> or chat on <a href="https://wa.me/17609251862" target="_blank" rel="noopener" style="color:#25D366;font-weight:700;text-decoration:none">WhatsApp</a>.</p>
       </div>
-      <div class="response-time">We typically respond within 2 hours during business hours.</div>
-      <div class="cta-divider">Or send a message</div>
-      <form class="contact-form" id="contactForm">
-        <div class="form-row">
-          <div class="form-group">
-            <label>Name</label>
-            <input type="text" placeholder="First &amp; last name" required>
-          </div>
-          <div class="form-group">
-            <label>Phone</label>
-            <input type="tel" placeholder="(760) 000-0000" required>
-          </div>
-        </div>
-        <div class="form-group">
-          <label>Vehicle Type</label>
-          <select required>
-            <option value="">Select vehicle...</option>
-            <option>Sedan / Compact</option>
-            <option>SUV</option>
-            <option>Truck</option>
-            <option>Van / Minivan</option>
-            <option>Motorcycle</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>Service</label>
-          <select required>
-            <option value="">Select service...</option>
-            <option>Exterior Detail</option>
-            <option>Interior Detail</option>
-            <option>Full Detail (Interior + Exterior)</option>
-            <option>Add-On / Not Sure</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>Message (Optional)</label>
-          <textarea rows="3" placeholder="Notes, location, preferred time..."></textarea>
-        </div>
-        <button type="submit" class="form-submit">Send Message</button>
-      </form>
-      <p class="online-booking-note">Prefer to book online? <em>[Online booking coming soon]</em></p>
+
+      <div class="response-time" style="margin-top:1.5rem">We typically respond within 2 hours during business hours.</div>
     </div>
   </div>
 </section>
 
 <!-- INSTAGRAM FEED -->
-<!-- UNHIDE: Replace with Elfsight or SnapWidget Instagram embed once your account is active -->
 <section id="instagram" class="section--hidden">
   <div class="section-inner">
     <div class="fade-in" style="text-align:center;max-width:600px;margin:0 auto">
@@ -933,7 +867,6 @@ footer{background:#070707;border-top:1px solid var(--border);padding:3rem 1.25re
 </section>
 
 <!-- FOOTER -->
-<!-- SEO: Once you have a real address or GBP verified, add your full address here for NAP consistency -->
 <footer>
   <div class="footer-inner">
     <div class="footer-grid">
@@ -941,11 +874,9 @@ footer{background:#070707;border-top:1px solid var(--border);padding:3rem 1.25re
         <div class="footer-logo"><span>A</span>Cleaning Mobile Detailer</div>
         <p class="footer-tag">Professional mobile auto detailing serving the entire Imperial Valley. We come to you.</p>
         <div class="footer-socials">
-          <!-- PERSONALIZE: Replace with real Instagram URL -->
           <a href="https://www.instagram.com/acleanermobile/" class="footer-social" target="_blank" rel="noopener" aria-label="Instagram">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
           </a>
-          <!-- PERSONALIZE: Replace with real Facebook URL -->
           <a href="https://facebook.com" class="footer-social" target="_blank" rel="noopener" aria-label="Facebook">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
           </a>
@@ -957,7 +888,7 @@ footer{background:#070707;border-top:1px solid var(--border);padding:3rem 1.25re
           <li><strong>(760) 925-1862</strong></li>
           <li><a href="tel:7609251862">📞 Call us</a></li>
           <li><a href="https://wa.me/17609251862" target="_blank" rel="noopener">💬 WhatsApp</a></li>
-          <li><a href="#contact">✉ Inquiry form</a></li>
+          <li><a href="#contact">📅 Book online</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -999,14 +930,6 @@ footer{background:#070707;border-top:1px solid var(--border);padding:3rem 1.25re
 </div>
 
 <script>
-window.addEventListener('load', function() {
-  document.getElementById('toast').classList.remove('show');
-});
-window.addEventListener('pageshow', function(e) {
-  if (e.persisted) {
-    document.getElementById('toast').classList.remove('show');
-  }
-});
 // Fade-in scroll observer
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => {
@@ -1023,20 +946,9 @@ document.querySelectorAll('.faq-q').forEach(btn => {
   btn.addEventListener('click', () => {
     const item = btn.parentElement;
     const wasOpen = item.classList.contains('open');
-    // Close all others
     document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-    // Toggle current
     if (!wasOpen) item.classList.add('open');
   });
-});
-
-// Contact form submission with success toast
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  const t = document.getElementById('toast');
-  t.classList.add('show');
-  setTimeout(() => t.classList.remove('show'), 3500);
-  this.reset();
 });
 </script>
 </body>
