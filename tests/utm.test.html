@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex">
+<title>Tests: UTM capture</title>
+</head>
+<body>
+<h1>UTM capture tests</h1>
+<p id="summary">running</p>
+<ul id="results"></ul>
+
+<form id="f">
+  <input type="hidden" name="utm_source">
+  <input type="hidden" name="utm_medium">
+  <input type="hidden" name="utm_campaign">
+  <input type="hidden" name="utm_term">
+  <input type="hidden" name="utm_content">
+  <input type="hidden" name="landing_page">
+</form>
+
+<script src="harness.js"></script>
+<script src="../js/lead.js"></script>
+<script>
+function memoryStorage() {
+  var data = {};
+  return {
+    getItem: function (k) { return Object.prototype.hasOwnProperty.call(data, k) ? data[k] : null; },
+    setItem: function (k, v) { data[k] = String(v); }
+  };
+}
+
+test('parseUtm reads only utm keys', function () {
+  eq(Lead.parseUtm('?utm_source=meta&utm_medium=paid&gclid=x&foo=1'), { utm_source: 'meta', utm_medium: 'paid' });
+});
+
+test('parseUtm decodes and trims values', function () {
+  eq(Lead.parseUtm('?utm_campaign=%20ceramic%20fall%20'), { utm_campaign: 'ceramic fall' });
+});
+
+test('parseUtm caps long values at 200 characters', function () {
+  var long = new Array(300).join('a');
+  eq(Lead.parseUtm('?utm_term=' + long).utm_term.length, 200);
+});
+
+test('parseUtm ignores empty values and empty search', function () {
+  eq(Lead.parseUtm('?utm_source='), {});
+  eq(Lead.parseUtm(''), {});
+});
+
+test('rememberUtm stores utm with the landing page', function () {
+  var s = memoryStorage();
+  var d = Lead.rememberUtm('?utm_source=google', s, '/ceramic-coating.html');
+  eq(d, { utm_source: 'google', landing_page: '/ceramic-coating.html' });
+  eq(JSON.parse(s.getItem('ac_utm')), d);
+});
+
+test('rememberUtm returns stored data on a later page without utm', function () {
+  var s = memoryStorage();
+  Lead.rememberUtm('?utm_source=meta&utm_campaign=c1', s, '/');
+  eq(Lead.rememberUtm('', s, '/quote.html'), { utm_source: 'meta', utm_campaign: 'c1', landing_page: '/' });
+});
+
+test('rememberUtm stores the landing page even without utm, first visit only', function () {
+  var s = memoryStorage();
+  eq(Lead.rememberUtm('', s, '/reset-detail.html'), { landing_page: '/reset-detail.html' });
+  eq(Lead.rememberUtm('', s, '/quote.html'), { landing_page: '/reset-detail.html' });
+});
+
+test('rememberUtm: new utm replaces old utm', function () {
+  var s = memoryStorage();
+  Lead.rememberUtm('?utm_source=meta', s, '/');
+  eq(Lead.rememberUtm('?utm_source=google', s, '/quote.html'), { utm_source: 'google', landing_page: '/quote.html' });
+});
+
+test('rememberUtm works without storage', function () {
+  eq(Lead.rememberUtm('?utm_medium=cpc', null, '/x'), { utm_medium: 'cpc', landing_page: '/x' });
+});
+
+test('rememberUtm survives broken stored JSON', function () {
+  var s = memoryStorage();
+  s.setItem('ac_utm', '{oops');
+  eq(Lead.rememberUtm('', s, '/q'), { landing_page: '/q' });
+});
+
+test('fillHidden writes values and clears missing ones', function () {
+  var f = document.getElementById('f');
+  f.elements.utm_term.value = 'old';
+  Lead.fillHidden(f, { utm_source: 'meta', landing_page: '/' });
+  eq(f.elements.utm_source.value, 'meta');
+  eq(f.elements.landing_page.value, '/');
+  eq(f.elements.utm_term.value, '');
+});
+
+done();
+</script>
+</body>
+</html>

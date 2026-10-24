@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex">
+<title>Tests: ceramic visualizer</title>
+</head>
+<body>
+<h1>Ceramic visualizer tests</h1>
+<p id="summary">running</p>
+<ul id="results"></ul>
+
+<!-- Fixture: the same hooks the real page uses -->
+<div id="viz">
+  <div class="viz-stage">
+    <svg viewBox="0 0 400 150"><path class="js-body"/><path class="js-glass"/><circle class="js-wheel"/><circle class="js-wheel"/>
+      <g data-layer="swirls"></g><g data-layer="scratches"></g><g data-layer="faded"></g></svg>
+    <div class="viz-after"><svg viewBox="0 0 400 150"><path class="js-body"/><path class="js-glass"/><circle class="js-wheel"/><circle class="js-wheel"/></svg></div>
+  </div>
+  <input type="radio" name="viz-body" value="sedan"><input type="radio" name="viz-body" value="suv">
+  <input type="radio" name="viz-color" value="black"><input type="radio" name="viz-color" value="red">
+  <input type="checkbox" name="viz-layer" value="swirls"><input type="checkbox" name="viz-layer" value="scratches">
+  <input type="checkbox" name="viz-layer" value="faded">
+  <input type="range" class="js-split" min="0" max="100">
+</div>
+
+<script src="harness.js"></script>
+<script src="../js/viz.js"></script>
+<script>
+var V = CeramicViz;
+var s0 = V.initialState();
+
+test('has the five body types from the spec', function () {
+  eq(Object.keys(V.BODIES).sort(), ['coupe', 'sedan', 'suv', 'truck', 'van']);
+});
+test('has the three overlay layers from the spec', function () {
+  eq(V.LAYERS, ['swirls', 'scratches', 'faded']);
+});
+test('initial state', function () {
+  eq(s0, { body: 'sedan', color: 'black', layers: { swirls: true, scratches: true, faded: true }, split: 50 });
+});
+test('body change', function () {
+  eq(V.reduce(s0, { type: 'body', value: 'truck' }).body, 'truck');
+});
+test('unknown body is ignored', function () {
+  eq(V.reduce(s0, { type: 'body', value: 'tank' }), s0);
+});
+test('color change and unknown color ignored', function () {
+  eq(V.reduce(s0, { type: 'color', value: 'red' }).color, 'red');
+  eq(V.reduce(s0, { type: 'color', value: 'url(x)' }), s0);
+});
+test('layer toggle does not mutate the old state', function () {
+  var s1 = V.reduce(s0, { type: 'layer', value: 'scratches', on: false });
+  eq(s1.layers.scratches, false);
+  eq(s0.layers.scratches, true);
+});
+test('unknown layer is ignored', function () {
+  eq(V.reduce(s0, { type: 'layer', value: 'rust', on: true }), s0);
+});
+test('split clamps to 0-100 and rounds', function () {
+  eq(V.reduce(s0, { type: 'split', value: 140 }).split, 100);
+  eq(V.reduce(s0, { type: 'split', value: -3 }).split, 0);
+  eq(V.reduce(s0, { type: 'split', value: '33.6' }).split, 34);
+});
+test('split ignores non-numbers', function () {
+  eq(V.reduce(s0, { type: 'split', value: 'abc' }).split, 50);
+});
+test('unknown action returns the same state', function () {
+  eq(V.reduce(s0, { type: 'nope' }), s0);
+});
+
+test('render sets paint, split, body paths and slider text', function () {
+  var root = document.getElementById('viz');
+  var s = V.reduce(V.reduce(s0, { type: 'body', value: 'suv' }), { type: 'split', value: 30 });
+  V.render(root, s);
+  eq(root.style.getPropertyValue('--paint'), V.COLORS.black.hex);
+  eq(root.style.getPropertyValue('--split'), '30%');
+  var bodies = root.querySelectorAll('.js-body');
+  eq(bodies[0].getAttribute('d'), V.BODIES.suv.body);
+  eq(bodies[1].getAttribute('d'), V.BODIES.suv.body);
+  eq(root.querySelectorAll('.js-wheel')[1].getAttribute('cx'), String(V.BODIES.suv.wheels[1]));
+  var range = root.querySelector('.js-split');
+  eq(range.value, '30');
+  eq(range.getAttribute('aria-valuetext'), 'Before 30%, after 70%');
+  eq(root.querySelector('input[name="viz-body"][value="suv"]').checked, true);
+});
+
+test('render hides switched-off layers', function () {
+  var root = document.getElementById('viz');
+  V.render(root, V.reduce(s0, { type: 'layer', value: 'faded', on: false }));
+  eq(root.querySelector('[data-layer="faded"]').hasAttribute('hidden'), true);
+  eq(root.querySelector('[data-layer="swirls"]').hasAttribute('hidden'), false);
+  eq(root.querySelector('input[value="faded"]').checked, false);
+});
+
+test('init wires the slider and the radios', function () {
+  var root = document.getElementById('viz');
+  V.init(root);
+  var range = root.querySelector('.js-split');
+  range.value = '80';
+  range.dispatchEvent(new Event('input', { bubbles: true }));
+  eq(root.style.getPropertyValue('--split'), '80%');
+  var red = root.querySelector('input[name="viz-color"][value="red"]');
+  red.checked = true;
+  red.dispatchEvent(new Event('change', { bubbles: true }));
+  eq(root.style.getPropertyValue('--paint'), V.COLORS.red.hex);
+  var sc = root.querySelector('input[value="scratches"]');
+  sc.checked = false;
+  sc.dispatchEvent(new Event('change', { bubbles: true }));
+  eq(root.querySelector('[data-layer="scratches"]').hasAttribute('hidden'), true);
+});
+
+done();
+</script>
+</body>
+</html>
