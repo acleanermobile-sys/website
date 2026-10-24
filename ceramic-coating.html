@@ -90,6 +90,7 @@
 
       <div class="viz" data-viz>
         <p class="viz-label">Illustration: results vary</p>
+        <noscript><p class="muted">The visualizer needs JavaScript. You can still <a href="quote.html?service=ceramic">get a ceramic quote</a>.</p></noscript>
         <div class="viz-stage">
           <svg viewBox="0 0 400 150" role="img" aria-label="Before: paint with the selected defects">
             <defs><clipPath id="viz-clip-before"><path class="js-body"/></clipPath></defs>
@@ -124,7 +125,7 @@
               <path class="js-body paint"/>
               <g clip-path="url(#viz-clip-after)">
                 <rect width="400" height="150" fill="url(#viz-gloss)"/>
-                <rect class="viz-sweep" x="0" y="-20" width="70" height="190" fill="url(#viz-sweep)" transform="skewX(-20)"/>
+                <g class="viz-sweep"><rect x="0" y="-20" width="70" height="190" fill="url(#viz-sweep)" transform="skewX(-20)"/></g>
               </g>
               <path class="js-glass glass"/>
               <circle class="js-wheel tyre" cy="126" r="20"/><circle class="js-wheel tyre" cy="126" r="20"/>

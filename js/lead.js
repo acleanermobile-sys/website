@@ -3,7 +3,7 @@
   var UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
   var HIDDEN_KEYS = UTM_KEYS.concat('landing_page');
   var STORE_KEY = 'ac_utm';
-  var SERVICES = ['ceramic', 'reset', 'standard', 'addon', 'unsure'];
+  var SERVICES = ['ceramic', 'reset', 'standard', 'unsure'];
 
   function parseUtm(search) {
     var params = new URLSearchParams(search || '');
