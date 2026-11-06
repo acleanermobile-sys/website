@@ -1,4 +1,4 @@
 User-agent: *
-Disallow: /tests/
+Allow: /
 
 Sitemap: https://acmobiledetailings.com/sitemap.xml

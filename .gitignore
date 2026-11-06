@@ -1,0 +1,7 @@
+.DS_Store
+*.Zone.Identifier
+*.zip
+drive-download*/
+originals/
+.venv/
+node_modules/
